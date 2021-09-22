@@ -154,8 +154,18 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
-
-
+" 回车选中补全 而不是换行
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else           
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>" 
+endif
+" 触发提示
+if has('nvim')
+  inoremap <silent><expr> <C-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
 
 " tab标签
 Plug 'kyazdani42/nvim-web-devicons'
@@ -182,7 +192,7 @@ nnoremap <silent>    <A-9> :BufferLast<CR>
 " Pin/unpin buffer
 nnoremap <silent>    <A-p> :BufferPin<CR>
 " Close buffer
-nnoremap <silent>    <A-c> :BufferClose<CR>
+nnoremap <silent>    <A-w> :BufferClose<CR>
 " Wipeout buffer
 "                          :BufferWipeout<CR>
 " Close commands
@@ -236,7 +246,7 @@ colorscheme onedark
 
 set cursorline                          " Enable highlighting of the current line
 
-hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=green guibg=#696969 
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=green guibg=#135564
 " 滚动
 " Plug 'psliwka/vim-smoothie'
 
