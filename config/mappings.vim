@@ -1,5 +1,6 @@
 " Alternate way to save
-nnoremap <C-s> <Esc> :w<CR>
+inoremap <M-s> <Esc> :w<CR>
+nnoremap <M-s> <Esc> :w<CR>
 " Alternate way to quit
 nnoremap <C-Q> :wq!<CR>
 

@@ -234,6 +234,9 @@ Plug 'sheerun/vim-polyglot'
 syntax on
 colorscheme onedark
 
+set cursorline                          " Enable highlighting of the current line
+
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=green guibg=#696969 
 " 滚动
 " Plug 'psliwka/vim-smoothie'
 
@@ -272,5 +275,9 @@ nnoremap vat :call JSXSelectTag()<CR>
 " git 
 Plug 'tpope/vim-fugitive'
 
+" 书签插件
+Plug 'MattesGroeger/vim-bookmarks'
+" 选中添加括号插件
+Plug 'tpope/vim-surround'
 call plug#end()
 
