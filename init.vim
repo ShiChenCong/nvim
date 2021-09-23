@@ -26,7 +26,7 @@ let g:nvim_tree_width = 40 "30 by default, can be width_in_columns or 'width_in_
 let g:nvim_tree_ignore = [] "empty by default
 let g:nvim_tree_gitignore = 1 "0 by default
 let g:nvim_tree_auto_open = 1 "0 by default, opens the tree when typing `vim $DIR` or `vim`
-let g:nvim_tree_auto_close = 1 "0 by default, closes the tree when it's the last window
+let g:nvim_tree_auto_close = 0 "0 by default, closes the tree when it's the last window
 let g:nvim_tree_auto_ignore_ft = [ 'startify', 'dashboard' ] "empty by default, don't auto open tree on specific filetypes.
 let g:nvim_tree_quit_on_open = 1 "0 by default, closes the tree when you open a file
 let g:nvim_tree_follow = 1 "0 by default, this option allows the cursor to be updated when entering a buffer
@@ -155,7 +155,12 @@ function! s:show_documentation()
   endif
 endfunction
 
-
+" 回车选中补全，而不是换行
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else           
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>" 
+endif
 
 " tab标签
 Plug 'kyazdani42/nvim-web-devicons'
@@ -182,7 +187,7 @@ nnoremap <silent>    <A-9> :BufferLast<CR>
 " Pin/unpin buffer
 nnoremap <silent>    <A-p> :BufferPin<CR>
 " Close buffer
-nnoremap <silent>    <A-c> :BufferClose<CR>
+nnoremap <silent>    <A-w> :BufferClose<CR>
 " Wipeout buffer
 "                          :BufferWipeout<CR>
 " Close commands
@@ -236,17 +241,17 @@ colorscheme onedark
 
 set cursorline                          " Enable highlighting of the current line
 
-hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=green guibg=#696969 
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=green guibg=#135564
 " 滚动
 " Plug 'psliwka/vim-smoothie'
 
 " 搜索文件
-" Plug 'nvim-lua/plenary.nvim'
-" Plug 'nvim-telescope/telescope.nvim'
-" nnoremap <leader>ff <cmd>Telescope find_files<cr>
-" nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-" nnoremap <leader>fb <cmd>Telescope buffers<cr>
-" nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 Plug 'chemzqm/vim-jsx-improve'
 Plug 'pangloss/vim-javascript'
@@ -279,5 +284,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'MattesGroeger/vim-bookmarks'
 " 选中添加括号插件
 Plug 'tpope/vim-surround'
+
+Plug 'unblevable/quick-scope'       " Plug
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
 call plug#end()
 
