@@ -296,8 +296,8 @@ Plug 'unblevable/quick-scope'       " Plug
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 Plug 'APZelos/blamer.nvim'
-let g:blamer_enabled = 1
 let g:blamer_delay = 500
+let g:blamer_enabled = 1
 let g:blamer_show_in_visual_modes = 0
 let g:blamer_show_in_insert_modes = 0
 
@@ -308,5 +308,6 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'rlue/vim-barbaric'
 Plug 'brooth/far.vim'
 
+Plug 'tpope/vim-unimpaired'
 call plug#end()
 
