@@ -40,3 +40,15 @@ endfunction
 
 nnoremap <silent>n :call CenteredFindNext(1)<CR>
 nnoremap <silent>N :call CenteredFindNext(0)<CR>
+" Better nav for omnicomplete
+inoremap <expr> <C-j> ("\<C-n>")
+inoremap <expr> <C-k> ("\<C-p>")
+" TAB in general mode will move to text buffer
+nnoremap <TAB> :bnext<CR>
+" SHIFT-TAB will go back
+nnoremap <S-TAB> :bprevious<CR>
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l

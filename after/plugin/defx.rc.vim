@@ -8,7 +8,7 @@ nnoremap <silent>sf :<C-u>Defx -listed -resume
       \ -columns=indent:mark:icon:mark:icons:mark:filename:git:size
       \ -buffer-name=tab`tabpagenr()`
       \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
-nnoremap <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
+nnoremap <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')` -columns=indent:mark:icon:mark:icons:mark:filename:git:size<CR>
 
 autocmd FileType defx call s:defx_my_settings()
 	function! s:defx_my_settings() abort
