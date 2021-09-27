@@ -109,8 +109,7 @@ let g:nvim_tree_icons = {
     \   }
     \ }
 
-" nnoremap <C-n> :NvimTreeToggle<CR>
-noremap <silent> <C-n> :lua require'tree'.toggle()<CR>
+ nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 " NvimTreeOpen, NvimTreeClose and NvimTreeFocus are also available if you need them
@@ -171,48 +170,18 @@ endif
 
 " tab标签
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'romgrk/barbar.nvim'
-" Plug 'romgrk/doom-one.vim'
-"let g:doom_one_terminal_colors = v:true
-
-" Move to previous/next
-nnoremap <silent>    <A-,> :BufferPrevious<CR>
-nnoremap <silent>    <A-.> :BufferNext<CR>
-" Re-order to previous/next
-nnoremap <silent>    <A-<> :BufferMovePrevious<CR>
-nnoremap <silent>    <A->> :BufferMoveNext<CR>
-" Goto buffer in position...
-nnoremap <silent>    <A-1> :BufferGoto 1<CR>
-nnoremap <silent>    <A-2> :BufferGoto 2<CR>
-nnoremap <silent>    <A-3> :BufferGoto 3<CR>
-nnoremap <silent>    <A-4> :BufferGoto 4<CR>
-nnoremap <silent>    <A-5> :BufferGoto 5<CR>
-nnoremap <silent>    <A-6> :BufferGoto 6<CR>
-nnoremap <silent>    <A-7> :BufferGoto 7<CR>
-nnoremap <silent>    <A-8> :BufferGoto 8<CR>
-nnoremap <silent>    <A-9> :BufferLast<CR>
-" Pin/unpin buffer
-nnoremap <silent>    <A-p> :BufferPin<CR>
-" Close buffer
-nnoremap <silent>    <A-w> :BufferClose<CR>
-" Wipeout buffer
-"                          :BufferWipeout<CR>
-" Close commands
-"                          :BufferCloseAllButCurrent<CR>
-"                          :BufferCloseAllButPinned<CR>
-"                          :BufferCloseBuffersLeft<CR>
-"                          :BufferCloseBuffersRight<CR>
-" Magic buffer-picking mode
-" nnoremap <silent> <C-s>    :BufferPick<CR>
-" Sort automatically by...
-nnoremap <silent> <Space>bb :BufferOrderByBufferNumber<CR>
-nnoremap <silent> <Space>bd :BufferOrderByDirectory<CR>
-nnoremap <silent> <Space>bl :BufferOrderByLanguage<CR>
-nnoremap <silent> <Space>bw :BufferOrderByWindowNumber<CR>
-
-" Other:
-" :BarbarEnable - enables barbar (enabled by default)
-" :BarbarDisable - very bad command, should never be used
+Plug 'akinsho/bufferline.nvim'
+nnoremap <silent><space>w :bn<bar>bd!#<cr>
+" nnoremap <silent><A-w>  :lua require('lua/bufferline')<CR>
+nnoremap <silent><A-1> <Cmd>BufferLineGoToBuffer 1<CR>
+nnoremap <silent><A-2> <Cmd>BufferLineGoToBuffer 2<CR>
+nnoremap <silent><A-3> <Cmd>BufferLineGoToBuffer 3<CR>
+nnoremap <silent><A-4> <Cmd>BufferLineGoToBuffer 4<CR>
+nnoremap <silent><A-5> <Cmd>BufferLineGoToBuffer 5<CR>
+nnoremap <silent><A-6> <Cmd>BufferLineGoToBuffer 6<CR>
+nnoremap <silent><A-7> <Cmd>BufferLineGoToBuffer 7<CR>
+nnoremap <silent><A-8> <Cmd>BufferLineGoToBuffer 8<CR>
+nnoremap <silent><A-9> <Cmd>BufferLineGoToBuffer 9<CR>
 
 " 看板
 Plug 'glepnir/dashboard-nvim'
@@ -244,10 +213,8 @@ Plug 'xolox/vim-misc'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 syntax on
-colorscheme onedark
-
-set cursorline                          " Enable highlighting of the current line
-
+  colorscheme solarized8
+ set cursorline                          " Enable highlighting of the current line
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=green guibg=#135564
 " 滚动
 " Plug 'psliwka/vim-smoothie'
@@ -319,5 +286,9 @@ nnoremap <silent> <Replace-Shortcut>  :Farr<cr>
 vnoremap <silent> <Replace-Shortcut>  :Farr<cr>
 Plug 'tpope/vim-unimpaired'
 Plug 'airblade/vim-gitgutter'
+Plug 'stsewd/fzf-checkout.vim'
 call plug#end()
 
+lua << EOF
+require("bufferline").setup{}
+EOF
