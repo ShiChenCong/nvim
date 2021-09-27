@@ -171,7 +171,6 @@ endif
 " tab标签
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim'
-nnoremap <silent><space>w :bn<bar>bd!#<cr>
 nnoremap <silent><A-w>  :lua require('bufferBar').closeBuffer()<CR>
 nnoremap <silent><A-1> <Cmd>BufferLineGoToBuffer 1<CR>
 nnoremap <silent><A-2> <Cmd>BufferLineGoToBuffer 2<CR>
@@ -267,6 +266,7 @@ let g:blamer_delay = 500
 let g:blamer_enabled = 1
 let g:blamer_show_in_visual_modes = 0
 let g:blamer_show_in_insert_modes = 0
+let g:blamer_date_format = '%y/%m/%d'
 
 Plug 'kristijanhusak/defx-git'
 Plug 'kristijanhusak/defx-icons'
