@@ -53,3 +53,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+nnoremap gs :Git<CR>
+nnoremap gc :Git commit<CR>
+nnoremap gp :Git push<CR>
