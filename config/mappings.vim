@@ -2,7 +2,7 @@
 inoremap <M-s> <Esc> :w<CR>
 nnoremap <M-s> <Esc> :w<CR>
 " Alternate way to quit
-nnoremap <C-Q> :wq!<CR>
+nnoremap <A-q> :q<CR>
 
 imap jj <Esc> :nohl <CR>
 " nnoremap <F9> :set hlsearch!<CR>
@@ -16,8 +16,9 @@ nnoremap <M-h>    :vertical resize +2<CR>
 nnoremap <M-l>    :vertical resize -2<CR>
 
 " <TAB>: completion. tab选中提示
- inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+nnoremap <A-n> :cn<CR>
+nnoremap <A-p> :cp<CR>
 " Better tabbing
 vnoremap < <gv
 vnoremap > >gv
@@ -47,6 +48,7 @@ nnoremap <silent>N :call CenteredFindNext(0)<CR>
 nnoremap <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
+" 切换window
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k

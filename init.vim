@@ -109,9 +109,9 @@ let g:nvim_tree_icons = {
     \   }
     \ }
 
- nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
+" nnoremap <leader>n :NvimTreeFindFile<CR>
 " NvimTreeOpen, NvimTreeClose and NvimTreeFocus are also available if you need them
 
 set termguicolors " this variable must be enabled for colors to be applied properly
@@ -137,8 +137,8 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " nmap <silent> gf  <Plug>(coc-codeaction)
 
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+" xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>as  <Plug>(coc-codeaction-selected)<CR>
 " nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>.  <Plug>(coc-fix-current) " 修复当前行
@@ -210,11 +210,12 @@ Plug 'xolox/vim-misc'
 
 " 主题
 Plug 'joshdick/onedark.vim'
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 syntax on
-  colorscheme solarized8
- set cursorline                          " Enable highlighting of the current line
+colorscheme solarized8
+set cursorline                          " Enable highlighting of the current line
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=green guibg=#135564
+hi! VertSplit guifg=black guibg=#002b36 ctermfg=black ctermbg=black
 " 滚动
 " Plug 'psliwka/vim-smoothie'
 
@@ -234,7 +235,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 
 Plug 'jiangmiao/auto-pairs'
-
+let g:AutoPairsShortcutToggle = ''
+let g:AutoPairsShortcutFastWrap = ''
+let g:AutoPairsShortcutBackInsert = ''
+let g:AutoPairsShortcutJump = ''
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tpope/vim-commentary'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
@@ -255,6 +259,10 @@ Plug 'tpope/vim-fugitive'
 
 " 书签插件
 Plug 'MattesGroeger/vim-bookmarks'
+highlight BookmarkSign ctermbg=NONE ctermfg=160
+highlight BookmarkLine ctermbg=194 ctermfg=NONE
+let g:bookmark_sign = '♥'
+let g:bookmark_highlight_lines = 1
 " 选中添加括号插件
 Plug 'tpope/vim-surround'
 
@@ -286,7 +294,13 @@ nnoremap <silent> <Replace-Shortcut>  :Farr<cr>
 vnoremap <silent> <Replace-Shortcut>  :Farr<cr>
 Plug 'tpope/vim-unimpaired'
 Plug 'airblade/vim-gitgutter'
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
 Plug 'stsewd/fzf-checkout.vim'
+Plug 'easymotion/vim-easymotion'
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+Plug 'karb94/neoscroll.nvim'
 call plug#end()
 
 lua << EOF
