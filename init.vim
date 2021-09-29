@@ -300,6 +300,7 @@ Plug 'airblade/vim-gitgutter'
 nmap ]h <Plug>(GitGutterNextHunk)
 nmap [h <Plug>(GitGutterPrevHunk)
 Plug 'stsewd/fzf-checkout.vim'
+nmap <A-b> :GBranches<CR>
 Plug 'easymotion/vim-easymotion'
 map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
