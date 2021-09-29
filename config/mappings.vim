@@ -3,8 +3,8 @@ inoremap <M-s> <Esc> :w<CR>
 nnoremap <M-s> <Esc> :w<CR>
 " Alternate way to quit
 nnoremap <A-q> :q<CR>
-
 imap jj <Esc> :nohl <CR>
+
 " nnoremap <F9> :set hlsearch!<CR>
 
 " Use OSX clipboard to copy and to paste
@@ -17,8 +17,8 @@ nnoremap <M-l>    :vertical resize -2<CR>
 
 " <TAB>: completion. tab选中提示
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-nnoremap <A-n> :cn<CR>
-nnoremap <A-p> :cp<CR>
+" nnoremap <A-n> :cn<CR>
+" nnoremap <A-p> :cp<CR>
 " Better tabbing
 vnoremap < <gv
 vnoremap > >gv
@@ -54,6 +54,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-nnoremap gs :Git<CR>
-nnoremap gc :Git commit<CR>
-nnoremap gp :Git push<CR>
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>gc :Git commit<CR>
+nnoremap <leader>gp :Git push<CR>
