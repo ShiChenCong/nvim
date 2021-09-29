@@ -3,21 +3,16 @@ source $HOME/.config/nvim/config/mappings.vim
 if has("nvim")
   let g:plug_home = stdpath('data') . '/plugged'
 endif
-
-set number
-set tabstop=4 
-set softtabstop=4 
-set shiftwidth=4 
-set noexpandtab 
-set nu  
-set autoindent
-set cindent
-
-
+let &t_Cs = "\e[4:3m"
+let &t_Ce = "\e[4:0m"
 if has("autocmd")                                                          
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif                                                        
 endif
-
+" autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+" filetype on
+" filetype plugin indent on
+" autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+" autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
 call plug#begin('~/.config/nvim/plugged')
 " 目录树
 Plug 'kyazdani42/nvim-tree.lua'
@@ -121,11 +116,11 @@ highlight NvimTreeFolderIcon guibg=blue
 
 
 " 快速查找文件
-Plug 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
-  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
-  \ }
+" Plug 'ctrlpvim/ctrlp.vim'
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
+"   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+"   \ }
 
 " 代码补全  
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -219,6 +214,10 @@ colorscheme solarized8
 set cursorline                          " Enable highlighting of the current line
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=green guibg=#135564
 hi! VertSplit guifg=black guibg=#002b36 ctermfg=black ctermbg=black
+
+hi CocUnderline gui=undercurl term=undercurl
+hi CocErrorHighlight ctermfg=red  guifg=#c4384b gui=undercurl term=undercurl
+hi CocWarningHighlight ctermfg=yellow guifg=#c4ab39 gui=undercurl term=undercurl
 " 滚动
 " Plug 'psliwka/vim-smoothie'
 
@@ -230,8 +229,9 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-Plug 'chemzqm/vim-jsx-improve'
-Plug 'pangloss/vim-javascript'
+" jsx 回车 indent插件
+ " Plug 'chemzqm/vim-jsx-improve'
+ " Plug 'pangloss/vim-javascript'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -248,6 +248,7 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 " Plug 'hoob3rt/lualine.nvim'
 Plug 'shadmansaleh/lualine.nvim'
+" 处理代码高亮和回车自动indent
 Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -273,7 +274,7 @@ Plug 'unblevable/quick-scope'       " Plug
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 Plug 'APZelos/blamer.nvim'
-let g:blamer_delay = 500
+let g:blamer_delay = 1000
 let g:blamer_enabled = 1
 let g:blamer_show_in_visual_modes = 0
 let g:blamer_show_in_insert_modes = 0
@@ -305,6 +306,7 @@ Plug 'easymotion/vim-easymotion'
 map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
 Plug 'karb94/neoscroll.nvim'
+Plug 'groenewege/vim-less'
 call plug#end()
 
 lua << EOF
