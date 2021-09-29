@@ -134,9 +134,11 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next) " 下一个eslin错误
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gr <Plug>(coc-references-used)
 " nmap <silent> gf  <Plug>(coc-codeaction)
-
+nnoremap <A-n> :CocNext<cr>
+nnoremap <A-p> :CocPrev<cr>
+nnoremap <A-c> :CocList --normal location<cr>
 " xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>as  <Plug>(coc-codeaction-selected)<CR>
 " nmap <leader>ac  <Plug>(coc-codeaction)
@@ -167,7 +169,8 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
-
+let g:coc_enable_locationlist = 0
+autocmd User CocLocationsChange CocList --normal location
 " tab标签
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim'
@@ -243,8 +246,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tpope/vim-commentary'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
-Plug 'hoob3rt/lualine.nvim'
-
+" Plug 'hoob3rt/lualine.nvim'
+Plug 'shadmansaleh/lualine.nvim'
 Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
