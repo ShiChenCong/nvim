@@ -1,9 +1,10 @@
 let g:mapleader = "\<Space>"
 
+set nocompatible  " 关闭 vi 兼容模式, 必选
 syntax enable                           " Enables syntax highlighing
 set guifont=Hack\ Nerd\ Font:h14
 set hidden                              " Required to keep multiple buffers open multiple buffers
-set nowrap                              " Display long lines as just one line
+" set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file

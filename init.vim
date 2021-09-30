@@ -207,7 +207,7 @@ Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
 
 " 主题
-Plug 'joshdick/onedark.vim'
+" Plug 'joshdick/onedark.vim'
 " Plug 'sheerun/vim-polyglot'
 syntax on
 colorscheme solarized8
@@ -274,7 +274,7 @@ Plug 'unblevable/quick-scope'       " Plug
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 Plug 'APZelos/blamer.nvim'
-let g:blamer_delay = 1000
+let g:blamer_delay = 500
 let g:blamer_enabled = 1
 let g:blamer_show_in_visual_modes = 0
 let g:blamer_show_in_insert_modes = 0
@@ -307,6 +307,7 @@ map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
 Plug 'karb94/neoscroll.nvim'
 Plug 'groenewege/vim-less'
+Plug 'sindrets/diffview.nvim'
 call plug#end()
 
 lua << EOF

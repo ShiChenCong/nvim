@@ -2,6 +2,7 @@
 inoremap <M-s> <Esc> :w<CR>
 nnoremap <M-s> <Esc> :w<CR>
 " Alternate way to quit
+" nnoremap <A-q> <C-w>j :q<CR> :Gedit <CR>
 nnoremap <A-q> :q<CR>
 imap jj <Esc> :nohl <CR>
 
