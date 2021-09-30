@@ -2,5 +2,6 @@
 	"eslint.autoFixOnSave":true,
 	"eslint.alwaysShowStatus":true,
 	"eslint.options": { "configFile": "/Users/shichencong/workplace/dna-frontend/.eslintrc.js" },
-	"eslint.lintTask.options": [".", "--ext", ".ts"]
+	"eslint.lintTask.options": [".", "--ext", ".ts"],
+  "imselect.defaultInput": "com.apple.keylayout.ABC"
 }

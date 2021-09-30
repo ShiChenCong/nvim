@@ -215,9 +215,9 @@ set cursorline                          " Enable highlighting of the current lin
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=green guibg=#135564
 hi! VertSplit guifg=black guibg=#002b36 ctermfg=black ctermbg=black
 
-hi CocUnderline gui=undercurl term=undercurl
-hi CocErrorHighlight ctermfg=red  guifg=#c4384b gui=undercurl term=undercurl
-hi CocWarningHighlight ctermfg=yellow guifg=#c4ab39 gui=undercurl term=undercurl
+" hi CocUnderline gui=undercurl term=undercurl
+" hi CocErrorHighlight ctermfg=red  guifg=#c4384b gui=undercurl term=undercurl
+" hi CocWarningHighlight ctermfg=yellow guifg=#c4ab39 gui=undercurl term=undercurl
 " 滚动
 " Plug 'psliwka/vim-smoothie'
 
