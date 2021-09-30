@@ -24,24 +24,25 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 vnoremap < <gv
 vnoremap > >gv
 
-function! CenteredFindNext(forward)
-    " save the current value for later restore
-    let s:so_curr=&scrolloff
-    set scrolloff=999
-    try
-        if a:forward
-            silent normal! n
-        else
-            silent normal! N
-        endif
-    finally
-        " restore no matter what
-        let &scrolloff=s:so_curr
-    endtry
-endfunction
+" function! CenteredFindNext(forward)
+"     " save the current value for later restore
+"     let s:so_curr=&scrolloff
+"     set scrolloff=999
+"     try
+"         if a:forward
+"             silent normal! n
+"         else
+"             silent normal! N
+"         endif
+"     finally
+"         " restore no matter what
+"         let &scrolloff=s:so_curr
+"     endtry
+" endfunction
 
-nnoremap <silent>n :call CenteredFindNext(1)<CR>
-nnoremap <silent>N :call CenteredFindNext(0)<CR>
+" nnoremap <silent>n :call CenteredFindNext(1)<CR>
+" nnoremap <silent>N :call CenteredFindNext(0)<CR>
+
 " Better nav for omnicomplete
 " inoremap <expr> <C-j> ("\<C-n>")
 " inoremap <expr> <C-k> ("\<C-p>")
@@ -65,5 +66,5 @@ nnoremap <leader>cf :let @*=expand("%")<CR>
 nnoremap <A-f> :FZF<CR>
 " 搜索单词 如果要全匹配单词 使用 Ra
 nnoremap <A-d> :Rg <CR>
-nnoremap <C-i><C-o>
-nnoremap <C-o><C-i>
+nnoremap <C-i> <C-o>
+nnoremap <C-o> <C-i>
