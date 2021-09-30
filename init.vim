@@ -210,7 +210,7 @@ Plug 'xolox/vim-misc'
 " Plug 'joshdick/onedark.vim'
 " Plug 'sheerun/vim-polyglot'
 syntax on
-colorscheme solarized8
+colorscheme gruvbox
 set cursorline                          " Enable highlighting of the current line
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=green guibg=#135564
 hi! VertSplit guifg=black guibg=#002b36 ctermfg=black ctermbg=black
@@ -235,6 +235,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+" 完整匹配单词 且可以指定目录搜索
+command! -bang -nargs=+ -complete=dir Ra call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 Plug 'mileszs/ack.vim'
 
 Plug 'jiangmiao/auto-pairs'

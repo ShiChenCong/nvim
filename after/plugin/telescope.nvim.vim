@@ -11,6 +11,8 @@ require('telescope').setup{
      layout_config = {
        width=80
      },
+    file_sorter =  require'telescope.sorters'.get_fzy_sorter,
+      generic_sorter =  require'telescope.sorters'.get_fzy_sorter,
     },
 	pickers = {
 	 live_grep ={ theme= "dropdown"  },

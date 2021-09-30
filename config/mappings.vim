@@ -55,6 +55,15 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+nnoremap <leader>cc :0Gclog<CR>
 nnoremap <leader>gs :Git<CR>
 nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gp :Git push<CR>
+
+nnoremap <leader>cf :let @*=expand("%")<CR>
+" 搜索文件
+nnoremap <A-f> :FZF<CR>
+" 搜索单词 如果要全匹配单词 使用 Ra
+nnoremap <A-d> :Rg <CR>
+nnoremap <C-i><C-o>
+nnoremap <C-o><C-i>
