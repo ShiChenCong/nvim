@@ -66,5 +66,13 @@ nnoremap <leader>cf :let @*=expand("%")<CR>
 nnoremap <A-f> :FZF<CR>
 " 搜索单词 如果要全匹配单词 使用 Ra
 nnoremap <A-d> :Rg <CR>
-nnoremap <C-i> <C-o>
+
 nnoremap <C-o> <C-i>
+nnoremap <C-i> <C-o>
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-j> <esc>:m .+1<CR>==
+inoremap <C-k> <esc>:m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==

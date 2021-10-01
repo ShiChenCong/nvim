@@ -1,5 +1,6 @@
 {
 	"eslint.autoFixOnSave":true,
+  "eslint.probe": ["javascript","javascriptreact","typescript","typescriptreact"],
 	"eslint.alwaysShowStatus":true,
 	"eslint.options": { "configFile": "/Users/shichencong/workplace/dna-frontend/.eslintrc.js" },
 	"eslint.lintTask.options": [".", "--ext", ".ts"],
