@@ -130,14 +130,14 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " jsx 回车 indent插件
- " Plug 'chemzqm/vim-jsx-improve'
+" Plug 'chemzqm/vim-jsx-improve'
  " Plug 'pangloss/vim-javascript'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " 完整匹配单词 且可以指定目录搜索
 command! -bang -nargs=+ -complete=dir Ra call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
-Plug 'mileszs/ack.vim'
+" Plug 'mileszs/ack.vim'
 
 Plug 'jiangmiao/auto-pairs'
 let g:AutoPairsShortcutToggle = ''

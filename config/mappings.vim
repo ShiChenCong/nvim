@@ -57,7 +57,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 nnoremap <leader>cc :0Gclog<CR>
-nnoremap <leader>gs :Git<CR>
+nnoremap <leader>g :Git<CR>
 nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gp :Git push<CR>
 
@@ -67,7 +67,9 @@ nnoremap <A-f> :FZF<CR>
 " 搜索单词 如果要全匹配单词 使用 Ra
 nnoremap <A-d> :Rg <CR>
 
+" 前进光标记录
 nnoremap <C-o> <C-i>
+" 后退光标记录
 nnoremap <C-i> <C-o>
 
 vnoremap <C-j> :m '>+1<CR>gv=gv
@@ -76,3 +78,8 @@ inoremap <C-j> <esc>:m .+1<CR>==
 inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
+
+" 去开头
+nnoremap H ^
+" 去行尾 
+nnoremap L $
