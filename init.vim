@@ -1,8 +1,9 @@
+
+source $HOME/.config/nvim/config/mappings.vim
 if exists('g:vscode')
   " vscode plugin
 else
   source $HOME/.config/nvim/config/setting.vim
-  source $HOME/.config/nvim/config/mappings.vim
   if has("nvim")
     let g:plug_home = stdpath('data') . '/plugged'
   endif
@@ -92,7 +93,7 @@ else
   nnoremap <silent><A-7> <Cmd>BufferLineGoToBuffer 7<CR>
   nnoremap <silent><A-8> <Cmd>BufferLineGoToBuffer 8<CR>
   nnoremap <silent><A-9> <Cmd>BufferLineGoToBuffer 9<CR>
-
+  nnoremap <leader>co :BufferLineCloseRight <CR>:BufferLineCloseLeft<CR>
   " 看板
   " Plug 'glepnir/dashboard-nvim'
   " " Plug 'liuchengxu/vim-clap'

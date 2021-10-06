@@ -1,3 +1,5 @@
+let g:mapleader = "\<Space>"
+
 " Alternate way to save
 inoremap <M-s> <Esc> :w<CR>
 nnoremap <M-s> <Esc> :w<CR>

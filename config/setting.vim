@@ -1,4 +1,3 @@
-let g:mapleader = "\<Space>"
 
 set nocompatible  " 关闭 vi 兼容模式, 必选
 syntax enable                           " Enables syntax highlighing
