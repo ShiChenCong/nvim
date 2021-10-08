@@ -15,9 +15,9 @@ require'nvim-tree'.setup {
   open_on_tab         = false,
    update_to_buf_dir   = {
     -- enable the feature
-    enable = true,
+    enable = false,
     -- allow to open the tree if it was previously closed
-    auto_open = true,
+    auto_open = false,
   },
   -- hijack the cursor in the tree to put it at the start of the filename
   hijack_cursor       = false,

@@ -9,14 +9,14 @@ require('telescope').setup{
 	defaults = {
      file_ignore_patterns = {"node_modules"},
      layout_config = {
-       width=80
+       width=180
      },
-    file_sorter =  require'telescope.sorters'.get_fzy_sorter,
-      generic_sorter =  require'telescope.sorters'.get_fzy_sorter,
+    -- file_sorter =  require'telescope.sorters'.get_fzy_sorter,
+    -- generic_sorter =  require'telescope.sorters'.get_fzy_sorter,
     },
 	pickers = {
-	 live_grep ={ theme= "dropdown"  },
-	 find_files={ theme= "dropdown"  }
+	 -- live_grep ={ theme= "dropdown"  },
+	 -- find_files={ theme= "dropdown"  }
 	},
 }
 EOF
