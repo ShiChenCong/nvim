@@ -110,7 +110,8 @@ else
   " Plug 'sheerun/vim-polyglot'
   Plug 'ful1e5/onedark.nvim'
   syntax enable
-  colorscheme  solarized8
+  " colorscheme  solarized8
+  colorscheme gruvbox
   " lua << EOF
   "  require("onedark").setup()
   " EOF
@@ -216,6 +217,7 @@ else
   Plug 'sindrets/diffview.nvim'
   Plug 'mhinz/vim-startify'
   let g:startify_session_dir = '~/.vim/sessions'
+  let g:startify_change_to_dir = 0
   let g:startify_lists = [
           \ { 'header': ['   Sessions'],       'type': 'sessions' },
           \ { 'header': ['   MRU'],            'type': 'files' },
