@@ -70,9 +70,9 @@ nnoremap <A-f> :FZF<CR>
 nnoremap <A-d> :Rg <CR>
 
 " 前进光标记录
-" nnoremap <C-o> <C-i>
+nnoremap <A-o> <C-i>
 " 后退光标记录
-" nnoremap <C-i> <C-o>
+nnoremap <A-i> <C-o>
 
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
