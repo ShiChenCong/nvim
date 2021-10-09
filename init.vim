@@ -111,7 +111,7 @@ else
   Plug 'ful1e5/onedark.nvim'
   syntax enable
   " colorscheme  solarized8
-  colorscheme gruvbox
+   colorscheme gruvbox
   " lua << EOF
   "  require("onedark").setup()
   " EOF

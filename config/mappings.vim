@@ -1,12 +1,14 @@
 let g:mapleader = "\<Space>"
 
+nnoremap <silent><Backspace> :noh<CR>
+
 " Alternate way to save
 inoremap <M-s> <Esc> :w<CR>
 nnoremap <M-s> <Esc> :w<CR>
 " Alternate way to quit
 " nnoremap <A-q> <C-w>j :q<CR> :Gedit <CR>
 nnoremap <A-q> :q<CR>
-imap jj <Esc> :nohl <CR>
+" imap jj <Esc> :nohl <CR>
 
 " nnoremap <F9> :set hlsearch!<CR>
 
@@ -85,3 +87,13 @@ nnoremap <C-k> :m .-2<CR>==
 nnoremap H ^
 " 去行尾 
 nnoremap L $
+
+cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%' "%% 自动扩展为当前目录
+
+inoremap <C-l>    <Right>
+cnoremap <C-l>    <Right>
+inoremap <C-h>    <Left>
+cnoremap <C-h>    <Left>
+
+inoremap <C-j>    <Down>
+inoremap <C-k>    <Up>

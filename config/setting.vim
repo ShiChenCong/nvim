@@ -21,9 +21,8 @@ set shiftwidth=2                        " Change the number of space characters 
 set foldmethod=indent                 " 开启手动折叠代码w"
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
 set expandtab                           " Converts tabs to spaces
-set smartindent                         " Makes indenting smart
-" set autoindent                          " Good auto indent
-" set laststatus=0                        " Always display the status line
+set autoindent " 自动缩进, 需要与 smartindent 配合使用才有效果
+set smartindent " 智能缩进, 在进行代码编写的时候会智能判断缩进距离, 与 autoindent 配合使用
 set number                              " Line numbers
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
