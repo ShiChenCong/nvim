@@ -14,7 +14,7 @@ else
   endif
   " autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
   " filetype on
-  " filetype plugin indent on
+  filetype plugin indent on
   " autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
   " autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
   call plug#begin('~/.config/nvim/plugged')
