@@ -15,10 +15,10 @@ nnoremap <A-q> :q<CR>
 " Use OSX clipboard to copy and to paste
 set clipboard+=unnamedplus
 
-nnoremap <M-j>    :resize +2<CR>
-nnoremap <M-k>    :resize -2<CR>
-nnoremap <M-h>    :vertical resize +2<CR>
-nnoremap <M-l>    :vertical resize -2<CR>
+nnoremap <leader><M-j>    :resize +2<CR>
+nnoremap <leader><M-k>    :resize -2<CR>
+nnoremap <leader><M-h>    :vertical resize +2<CR>
+nnoremap <leader><M-l>    :vertical resize -2<CR>
 
 " <TAB>: completion. tab选中提示
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -34,7 +34,6 @@ vnoremap > >gv
 "     set scrolloff=999
 "     try
 "         if a:forward
-"             silent normal! n
 "         else
 "             silent normal! N
 "         endif
@@ -61,6 +60,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 nnoremap <leader>cc :0Gclog<CR>
+"             silent normal! n
 nnoremap <leader>g :Git<CR>
 nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gp :Git push<CR>
@@ -90,10 +90,10 @@ nnoremap L $
 
 cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%' "%% 自动扩展为当前目录
 
-inoremap <C-l>    <Right>
-cnoremap <C-l>    <Right>
-inoremap <C-h>    <Left>
-cnoremap <C-h>    <Left>
+inoremap <M-l>    <Right>
+cnoremap <M-l>    <Right>
+inoremap <M-h>    <Left>
+cnoremap <M-h>    <Left>
 
-inoremap <C-j>    <Down>
-inoremap <C-k>    <Up>
+inoremap <M-j>    <Down>
+inoremap <M-k>    <Up>
