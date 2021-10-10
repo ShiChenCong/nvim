@@ -52,4 +52,47 @@ for _, lsp in ipairs(servers) do
       debounce_text_changes = 150,
     }
   }
+
+nvim_lsp.diagnosticls.setup {
+    filetypes = {"javascript", "javascript.jsx", "typescript", "typescriptreact", "vue"},
+    init_options = {
+      filetypes = {
+        javascript = "eslint",
+        ["javascript.jsx"] = "eslint",
+        javascriptreact = "eslint",
+        typescriptreact = "eslint",
+        typescript = "eslint",
+        vue = "eslint"
+      },
+      linters = {
+        eslint = {
+          sourceName = "eslint",
+          command = "./node_modules/.bin/eslint",
+          rootPatterns = {".git"},
+          debounce = 100,
+          args = {
+            "--cache",
+            "--stdin",
+            "--stdin-filename",
+            "%filepath",
+            "--format",
+            "json"
+          },
+          parseJson = {
+            errorsRoot = "[0].messages",
+            line = "line",
+            column = "column",
+            endLine = "endLine",
+            endColumn = "endColumn",
+            message = "${message} [${ruleId}]",
+            security = "severity"
+          },
+          securities = {
+            [2] = "error",
+            [1] = "warning"
+          }
+        }
+      }
+    }
+  }
 end
