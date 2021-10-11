@@ -151,6 +151,7 @@ else
   let g:AutoPairsShortcutJump = ''
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'tpope/vim-commentary'
+  nnoremap <M-m> :Commentary<CR>
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
   " Plug 'hoob3rt/lualine.nvim'
