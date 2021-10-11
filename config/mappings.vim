@@ -3,8 +3,10 @@ let g:mapleader = "\<Space>"
 nnoremap <silent><Backspace> :noh<CR>
 
 " Alternate way to save
-inoremap <M-s> <Esc> :w<CR>
-nnoremap <M-s> <Esc> :w<CR>
+inoremap <A-s> <Esc> :w<CR>
+nnoremap <A-s> <Esc> :w<CR>
+inoremap <A-a> <Esc> :wq<CR>
+nnoremap <A-a> <Esc> :wq<CR>
 " Alternate way to quit
 " nnoremap <A-q> <C-w>j :q<CR> :Gedit <CR>
 nnoremap <A-q> :q<CR>

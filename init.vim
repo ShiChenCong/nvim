@@ -1,5 +1,6 @@
 
 source $HOME/.config/nvim/config/mappings.vim
+
 if exists('g:vscode')
   " vscode plugin
 else
