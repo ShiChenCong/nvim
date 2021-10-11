@@ -73,15 +73,15 @@ nnoremap <A-d> :Rg <CR>
 
 " 前进光标记录
 nnoremap <A-o> <C-i>
-" 后退光标记录
+" 后退光标记录 
 nnoremap <A-i> <C-o>
-
-vnoremap <leader><C-j> :m '>+1<CR>gv=gv
-vnoremap <leader><C-k> :m '<-2<CR>gv=gv
-inoremap <leader><C-j> <esc>:m .+1<CR>==
-inoremap <leader><C-k> <esc>:m .-2<CR>==
-nnoremap <leader><C-j> :m .+1<CR>==
-nnoremap <leader><C-k> :m .-2<CR>==
+ 
+vnoremap <M-j> :m '>+1<CR>gv=gv
+vnoremap <M-k> :m '<-2<CR>gv=gv
+inoremap <M-j> <esc>:m .+1<CR>==
+inoremap <M-k> <esc>:m .-2<CR>==
+nnoremap <M-j> :m .+1<CR>==
+nnoremap <M-k> :m .-2<CR>==
 
 " 去开头
 nnoremap H ^

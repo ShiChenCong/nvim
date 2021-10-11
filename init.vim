@@ -118,7 +118,7 @@ else
   " 高亮行
   set cursorline                          " Enable highlighting of the current line
   hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=green guibg=#135564
-  hi! VertSplit guifg=black guibg=#002b36 ctermfg=black ctermbg=black
+  " hi! VertSplit guifg=black guibg=#002b36 ctermfg=black ctermbg=black
 
   " hi CocUnderline gui=undercurl term=undercurl
   " hi CocErrorHighlight ctermfg=red  guifg=#c4384b gui=undercurl term=undercurl
