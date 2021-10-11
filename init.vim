@@ -7,11 +7,11 @@ else
   if has("nvim")
     let g:plug_home = stdpath('data') . '/plugged'
   endif
-  let &t_Cs = "\e[4:3m"
-  let &t_Ce = "\e[4:0m"
-  if has("autocmd")                                                          
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif                                                        
-  endif
+  " let &t_Cs = "\e[4:3m"
+  " let &t_Ce = "\e[4:0m"
+  " if has("autocmd")                                                          
+  "   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif                                                        
+  " endif
   " autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
   " filetype on
   filetype plugin indent on
@@ -109,12 +109,12 @@ else
   " Plug 'joshdick/onedark.vim'
   " Plug 'sheerun/vim-polyglot'
   Plug 'ful1e5/onedark.nvim'
+  lua require('onedark').setup()
   syntax enable
   " colorscheme  solarized8
-   colorscheme gruvbox
-  " lua << EOF
-  "  require("onedark").setup()
-  " EOF
+  " colorscheme gruvbox
+   colorscheme onedark
+
   " 高亮行
   set cursorline                          " Enable highlighting of the current line
   hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=green guibg=#135564
@@ -191,7 +191,7 @@ else
   Plug 'kristijanhusak/defx-icons'
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
-  Plug 'rlue/vim-barbaric'
+  " Plug 'rlue/vim-barbaric'
   Plug 'brooth/far.vim'
   let g:far#enable_undo=1
   set lazyredraw            " improve scrolling performance when navigating through large results

@@ -76,12 +76,12 @@ nnoremap <A-o> <C-i>
 " 后退光标记录
 nnoremap <A-i> <C-o>
 
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
-inoremap <C-j> <esc>:m .+1<CR>==
-inoremap <C-k> <esc>:m .-2<CR>==
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
+vnoremap <leader><C-j> :m '>+1<CR>gv=gv
+vnoremap <leader><C-k> :m '<-2<CR>gv=gv
+inoremap <leader><C-j> <esc>:m .+1<CR>==
+inoremap <leader><C-k> <esc>:m .-2<CR>==
+nnoremap <leader><C-j> :m .+1<CR>==
+nnoremap <leader><C-k> :m .-2<CR>==
 
 " 去开头
 nnoremap H ^
@@ -90,10 +90,10 @@ nnoremap L $
 
 cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%' "%% 自动扩展为当前目录
 
-inoremap <M-l>    <Right>
-cnoremap <M-l>    <Right>
-inoremap <M-h>    <Left>
-cnoremap <M-h>    <Left>
+" inoremap <C-l>    <Right>
+" cnoremap <C-l>    <Right>
+" inoremap <C-i>    <Left>
+" cnoremap <C-i>    <Left>
 
-inoremap <M-j>    <Down>
-inoremap <M-k>    <Up>
+" inoremap <C-j>    <Down>
+" inoremap <C-k>    <Up>
