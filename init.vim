@@ -3,6 +3,7 @@ source $HOME/.config/nvim/config/mappings.vim
 
 if exists('g:vscode')
   " vscode plugin
+  source $HOME/.config/nvim/vscode/mapping.vim
 else
   source $HOME/.config/nvim/config/setting.vim
   if has("nvim")
@@ -84,7 +85,7 @@ else
   " tab标签
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'akinsho/bufferline.nvim'
-  nnoremap <silent><A-w>  :lua require('bufferBar').closeBuffer()<CR>
+  " nnoremap <silent><A-w>  :lua require('bufferBar').closeBuffer()<CR>
   nnoremap <silent><A-1> <Cmd>BufferLineGoToBuffer 1<CR>
   nnoremap <silent><A-2> <Cmd>BufferLineGoToBuffer 2<CR>
   nnoremap <silent><A-3> <Cmd>BufferLineGoToBuffer 3<CR>
@@ -107,14 +108,12 @@ else
 
 
   " 主题
-  " Plug 'joshdick/onedark.vim'
-  " Plug 'sheerun/vim-polyglot'
-  Plug 'ful1e5/onedark.nvim'
-  lua require('onedark').setup()
+  " Plug 'ful1e5/onedark.nvim'
+  " lua require('onedark').setup()
   syntax enable
   " colorscheme  solarized8
-  " colorscheme gruvbox
-   colorscheme onedark
+  colorscheme gruvbox
+   " colorscheme onedark
 
   " 高亮行
   set cursorline                          " Enable highlighting of the current line
@@ -143,6 +142,17 @@ else
   Plug 'junegunn/fzf.vim'
   " 完整匹配单词 且可以指定目录搜索
   command! -bang -nargs=+ -complete=dir Ra call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
+  function! s:build_quickfix_list(lines)
+    call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+    copen
+    cc
+  endfunction
+
+  let g:fzf_action = {
+        \ 'ctrl-q': function('s:build_quickfix_list'),
+        \ 'ctrl-t': 'tab split',
+        \ 'ctrl-x': 'split',
+        \ 'ctrl-v': 'vsplit' }
   " Plug 'mileszs/ack.vim'
 
   Plug 'jiangmiao/auto-pairs'
@@ -206,15 +216,18 @@ else
   nnoremap <silent> <Replace-Shortcut>  :Farr<cr>
   vnoremap <silent> <Replace-Shortcut>  :Farr<cr>
   Plug 'tpope/vim-unimpaired'
-  Plug 'airblade/vim-gitgutter'
-  nmap ]h <Plug>(GitGutterNextHunk)
-  nmap [h <Plug>(GitGutterPrevHunk)
+  " Plug 'airblade/vim-gitgutter'
+  " nmap ]h <Plug>(GitGutterNextHunk)
+  " nmap [h <Plug>(GitGutterPrevHunk)
   Plug 'stsewd/fzf-checkout.vim'
+
+  Plug 'lewis6991/gitsigns.nvim'
+
   nmap <A-b> :GBranches<CR>
   Plug 'easymotion/vim-easymotion'
   map  <Leader>f <Plug>(easymotion-bd-f)
   nmap <Leader>f <Plug>(easymotion-overwin-f)
-  Plug 'karb94/neoscroll.nvim'
+  " Plug 'karb94/neoscroll.nvim'
   Plug 'groenewege/vim-less'
   Plug 'sindrets/diffview.nvim'
   Plug 'mhinz/vim-startify'

@@ -10,7 +10,7 @@ nnoremap <A-a> <Esc> :wq<CR>
 " Alternate way to quit
 " nnoremap <A-q> <C-w>j :q<CR> :Gedit <CR>
 nnoremap <A-q> :q<CR>
-" imap jj <Esc> :nohl <CR>
+imap jj <Esc> 
 
 " nnoremap <F9> :set hlsearch!<CR>
 
