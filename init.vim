@@ -1,9 +1,31 @@
 
 source $HOME/.config/nvim/config/mappings.vim
 
+function! Cond(cond, ...)
+  let opts = get(a:000, 0, {})
+  return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
+endfunction
+
 if exists('g:vscode')
   " vscode plugin
   source $HOME/.config/nvim/vscode/mapping.vim
+  " call plug#begin('~/.config/nvim/plugged')
+  "   Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
+  "   " <Leader>f{char} to move to {char}
+  "   map  <Leader>f <Plug>(easymotion-bd-f)
+  "   nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+  "   " s{char}{char} to move to {char}{char}
+  "   nmap s <Plug>(easymotion-overwin-f2)
+
+  "   " Move to line
+  "   map <Leader>L <Plug>(easymotion-bd-jk)
+  "   nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+  "   " Move to word
+  "   map  <Leader>w <Plug>(easymotion-bd-w)
+  "   nmap <Leader>w <Plug>(easymotion-overwin-w)
+  " call plug#end()
 else
   source $HOME/.config/nvim/config/setting.vim
   if has("nvim")
@@ -85,7 +107,7 @@ else
   " tab标签
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'akinsho/bufferline.nvim'
-  " nnoremap <silent><A-w>  :lua require('bufferBar').closeBuffer()<CR>
+  nnoremap <silent><A-w>  :lua require('bufferBar').closeBuffer()<CR>
   nnoremap <silent><A-1> <Cmd>BufferLineGoToBuffer 1<CR>
   nnoremap <silent><A-2> <Cmd>BufferLineGoToBuffer 2<CR>
   nnoremap <silent><A-3> <Cmd>BufferLineGoToBuffer 3<CR>
@@ -224,7 +246,7 @@ else
   Plug 'lewis6991/gitsigns.nvim'
 
   nmap <A-b> :GBranches<CR>
-  Plug 'easymotion/vim-easymotion'
+  Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
   map  <Leader>f <Plug>(easymotion-bd-f)
   nmap <Leader>f <Plug>(easymotion-overwin-f)
   " Plug 'karb94/neoscroll.nvim'
