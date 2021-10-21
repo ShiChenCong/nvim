@@ -246,10 +246,15 @@ else
   Plug 'lewis6991/gitsigns.nvim'
 
   nmap <A-b> :GBranches<CR>
-  Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
+  " Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
+  " map  <Leader>f <Plug>(easymotion-bd-f)
+  " nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+  Plug 'easymotion/vim-easymotion'
   map  <Leader>f <Plug>(easymotion-bd-f)
   nmap <Leader>f <Plug>(easymotion-overwin-f)
-  " Plug 'karb94/neoscroll.nvim'
+
+  Plug 'karb94/neoscroll.nvim'
   Plug 'groenewege/vim-less'
   Plug 'sindrets/diffview.nvim'
   Plug 'mhinz/vim-startify'
