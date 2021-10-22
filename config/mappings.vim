@@ -72,6 +72,7 @@ nnoremap <leader>cf :let @*=expand("%")<CR>
 nnoremap <A-f> :FZF<CR>
 " 搜索单词 如果要全匹配单词 使用 Ra
 nnoremap <A-d> :Rg <CR>
+nnoremap <A-h> :History <CR>
 
 " 前进光标记录
 nnoremap <A-o> <C-i>
@@ -87,8 +88,10 @@ nnoremap <M-k> :m .-2<CR>==
 
 " 去开头
 nnoremap H ^
+vnoremap H ^
 " 去行尾 
 nnoremap L $
+vnoremap L $
 
 cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%' "%% 自动扩展为当前目录
 
