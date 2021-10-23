@@ -66,7 +66,7 @@ else
   nmap <silent> ]g <Plug>(coc-diagnostic-next) " 下一个eslin错误
   nmap <silent> gd <Plug>(coc-definition)
   nmap <silent> gy <Plug>(coc-type-definition)
-  nmap <silent> gi <Plug>(coc-implementation)
+  " nmap <silent> gi <Plug>(coc-implementation)
   nmap <silent> gr <Plug>(coc-references-used)
   " nmap <silent> gf  <Plug>(coc-codeaction)
   nnoremap <A-n> :CocNext<cr>

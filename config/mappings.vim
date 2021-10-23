@@ -102,3 +102,8 @@ cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%' "%% 自动扩
 
 nmap ss :split<Return>
 nmap sv :vsplit<Return>
+
+noremap p gp
+noremap P gP
+noremap gp p
+noremap gP P
