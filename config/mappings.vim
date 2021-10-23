@@ -14,9 +14,6 @@ imap jj <Esc>
 
 " nnoremap <F9> :set hlsearch!<CR>
 
-" Use OSX clipboard to copy and to paste
-set clipboard+=unnamedplus
-
 nnoremap <leader><M-j>    :resize +2<CR>
 nnoremap <leader><M-k>    :resize -2<CR>
 nnoremap <leader><M-h>    :vertical resize +2<CR>
