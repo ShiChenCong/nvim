@@ -102,3 +102,6 @@ cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%' "%% 自动扩
 
 " inoremap <C-j>    <Down>
 " inoremap <C-k>    <Up>
+
+nmap ss :split<Return>
+nmap sv :vsplit<Return>
