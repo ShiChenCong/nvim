@@ -109,15 +109,16 @@ noremap gp p
 noremap gP P
 
 
-" normal模式下进行替换
+" 先点击* normal模式下进行替换
 nnoremap <Leader>r :%s///g<Left><Left>
 nnoremap <Leader>rc :%s///gc<Left><Left><Left>
 
-" visual模式下进行替换
+" 先点击* 自动搜索光标所在的单词替换后 点击n切换到下一个单词 进行替换操作
+nnoremap <silent> s* :let @/='\<'.expand('<cword>').'\>'<CR>cgn
+xnoremap <silent> s* "sy:let @/=@s<CR>cgn
+
+"选中需要替换的代码快后在 visual模式下进行替换
 xnoremap <Leader>r :s///g<Left><Left>
 xnoremap <Leader>rc :s///gc<Left><Left><Left>
 
-" 自动搜索光标所在的单词替换后 点击n切换到下一个单词 进行替换操作
-nnoremap <silent> s* :let @/='\<'.expand('<cword>').'\>'<CR>cgn
-xnoremap <silent> s* "sy:let @/=@s<CR>cgn
 
