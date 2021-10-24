@@ -58,6 +58,11 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+map sh <C-w>h
+map sj <C-w>j
+map sk <C-w>k
+map sl <C-w>l
+
 nnoremap <leader>cc :0Gclog<CR>
 "             silent normal! n
 nnoremap <leader>g :Git<CR>
