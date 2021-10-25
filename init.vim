@@ -93,7 +93,7 @@ else
   Plug 'sainnhe/gruvbox-material'
   syntax enable
   " colorscheme  solarized8
-  " colorscheme gruvbox
+  colorscheme gruvbox
    " colorscheme onedark
 
   " 高亮行
