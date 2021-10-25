@@ -60,50 +60,6 @@ else
   "   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   "   \ }
 
-  " 代码补全  
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  nmap <silent> [g <Plug>(coc-diagnostic-prev) " 上一个eslint错误
-  nmap <silent> ]g <Plug>(coc-diagnostic-next) " 下一个eslin错误
-  nmap <silent> gd <Plug>(coc-definition)
-  nmap <silent> gy <Plug>(coc-type-definition)
-  " nmap <silent> gi <Plug>(coc-implementation)
-  nmap <silent> gr <Plug>(coc-references-used)
-  " nmap <silent> gf  <Plug>(coc-codeaction)
-  nnoremap <A-n> :CocNext<cr>
-  nnoremap <A-p> :CocPrev<cr>
-  nnoremap <A-c> :CocList --normal location<cr>
-  " xmap <leader>a  <Plug>(coc-codeaction-selected)
-  nmap <leader>as  <Plug>(coc-codeaction-selected)<CR>
-  " nmap <leader>ac  <Plug>(coc-codeaction)
-  " Apply AutoFix to problem on the current line.
-  nmap <leader>.  <Plug>(coc-fix-current) " 修复当前行
-
-  nnoremap <silent> K :call <SID>show_documentation()<CR>
-  function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-      execute 'h '.expand('<cword>')
-    elseif (coc#rpc#ready())
-      call CocActionAsync('doHover')
-    else
-      execute '!' . &keywordprg . " " . expand('<cword>')
-    endif
-  endfunction
-
-  " 回车选中补全，而不是换行
-  if exists('*complete_info')
-    inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-  else           
-    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>" 
-  endif
-
-  " 触发提示
-  if has('nvim')
-    inoremap <silent><expr> <C-space> coc#refresh()
-  else
-    inoremap <silent><expr> <c-@> coc#refresh()
-  endif
-  let g:coc_enable_locationlist = 0
-  autocmd User CocLocationsChange CocList --normal location
   " tab标签
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'akinsho/bufferline.nvim'
@@ -276,6 +232,14 @@ else
 
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   let g:VM_mouse_mappings = 1
+
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/nvim-cmp'
+  Plug 'hrsh7th/cmp-vsnip'
+  Plug 'hrsh7th/vim-vsnip'
+
   call plug#end()
 
   " lua << EOF
