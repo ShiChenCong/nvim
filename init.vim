@@ -90,9 +90,10 @@ else
   " 主题
   " Plug 'ful1e5/onedark.nvim'
   " lua require('onedark').setup()
+  Plug 'sainnhe/gruvbox-material'
   syntax enable
   " colorscheme  solarized8
-  colorscheme gruvbox
+  " colorscheme gruvbox
    " colorscheme onedark
 
   " 高亮行
@@ -146,7 +147,6 @@ else
   vnoremap <M-m> :Commentary<CR>
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
-  " Plug 'hoob3rt/lualine.nvim'
   Plug 'nvim-lualine/lualine.nvim'
   " 处理代码高亮和回车自动indent
   Plug 'yuezk/vim-js'
