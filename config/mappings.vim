@@ -122,7 +122,7 @@ nnoremap <Leader>rc :%s///gc<Left><Left><Left>
 nnoremap <silent> s* :let @/='\<'.expand('<cword>').'\>'<CR>cgn
 xnoremap <silent> s* "sy:let @/=@s<CR>cgn
 
-"选中需要替换的代码快后在 visual模式下进行替换
+"先点击* 选中需要替换的代码快后在 visual模式下进行替换
 xnoremap <Leader>r :s///g<Left><Left>
 xnoremap <Leader>rc :s///gc<Left><Left><Left>
 
