@@ -239,7 +239,7 @@ else
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/cmp-vsnip'
   Plug 'hrsh7th/vim-vsnip'
-
+  Plug 'rinx/lspsaga.nvim'
   call plug#end()
 
   " lua << EOF
