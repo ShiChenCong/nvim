@@ -118,6 +118,8 @@ else
   nnoremap <silent><A-8> <Cmd>BufferLineGoToBuffer 8<CR>
   nnoremap <silent><A-9> <Cmd>BufferLineGoToBuffer 9<CR>
   nnoremap <leader>co :BufferLineCloseRight <CR>:BufferLineCloseLeft<CR>
+  nnoremap <leader>cr :BufferLineCloseRight<CR>
+  nnoremap <leader>cl :BufferLineCloseLeft<CR>
   " 看板
   " Plug 'glepnir/dashboard-nvim'
   " " Plug 'liuchengxu/vim-clap'

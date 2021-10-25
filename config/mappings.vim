@@ -126,4 +126,5 @@ xnoremap <silent> s* "sy:let @/=@s<CR>cgn
 xnoremap <Leader>r :s///g<Left><Left>
 xnoremap <Leader>rc :s///gc<Left><Left><Left>
 
-
+nnoremap { {zz
+nnoremap } }zz
