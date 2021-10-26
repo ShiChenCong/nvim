@@ -142,10 +142,11 @@ else
   let g:AutoPairsShortcutBackInsert = ''
   let g:AutoPairsShortcutJump = ''
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  Plug 'tpope/vim-commentary'
-  nnoremap <M-m> :Commentary<CR>
-  vnoremap <M-m> :Commentary<CR>
-  Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+  " Plug 'tpope/vim-commentary'
+  " nnoremap <M-m> :Commentary<CR>
+  " vnoremap <M-m> :Commentary<CR>
+  " Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+  Plug 'b3nj5m1n/kommentary'
 
   Plug 'nvim-lualine/lualine.nvim'
   " 处理代码高亮和回车自动indent
