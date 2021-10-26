@@ -92,8 +92,8 @@ else
   " lua require('onedark').setup()
   Plug 'sainnhe/gruvbox-material'
   syntax enable
-  " colorscheme  solarized8
-  colorscheme gruvbox
+  colorscheme  solarized8
+  " colorscheme gruvbox
    " colorscheme onedark
 
   " 高亮行
@@ -241,6 +241,9 @@ else
   Plug 'hrsh7th/cmp-vsnip'
   Plug 'hrsh7th/vim-vsnip'
   Plug 'rinx/lspsaga.nvim'
+
+
+  Plug 'mattn/emmet-vim'
   call plug#end()
 
   " lua << EOF

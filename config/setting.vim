@@ -3,7 +3,7 @@ set nocompatible  " 关闭 vi 兼容模式, 必选
 syntax enable                           " Enables syntax highlighing
 set guifont=Hack\ Nerd\ Font:h14
 set hidden                              " Required to keep multiple buffers open multiple buffers
-" set nowrap                              " Display long lines as just one line
+set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
@@ -44,5 +44,5 @@ set showmatch
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 set fdm=indent
 set foldlevelstart=99
-" You can't stop me
+set formatoptions-=cro "换行的时候不要注释 You can't stop me
 cmap w!! w !sudo tee %

@@ -53,10 +53,10 @@ nnoremap <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
 " 切换window
-" nnoremap <C-h> <C-w>h
-" nnoremap <C-j> <C-w>j
-" nnoremap <C-k> <C-w>k
-" nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 map sh <C-w>h
 map sj <C-w>j
@@ -129,5 +129,5 @@ xnoremap <Leader>rc :s///gc<Left><Left><Left>
 nnoremap { {zz
 nnoremap } }zz
 
-nnoremap <C-k> :cnext<CR>zz
-nnoremap <C-j> :cprev<CR>zz
+" nnoremap <C-k> :cnext<CR>zz
+" nnoremap <C-j> :cprev<CR>zz
