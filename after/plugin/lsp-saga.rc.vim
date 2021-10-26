@@ -11,4 +11,4 @@ saga.init_lsp_saga {
 }
 EOF
 nnoremap <silent><M-Enter> <cmd>lua require('lspsaga.codeaction').code_action()<CR>
-nnoremap <silent><leader>ca <cmd>lua require('lspsaga.codeaction').code_action()<CR>
+nnoremap <silent><leader>. <cmd>lua require('lspsaga.codeaction').code_action()<CR>
