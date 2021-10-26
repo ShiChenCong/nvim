@@ -5,6 +5,7 @@ nnoremap <silent><Backspace> :noh<CR>
 " Alternate way to save
 inoremap <A-s> <Esc> :w<CR>
 nnoremap <A-s> <Esc> :w<CR>
+nnoremap <leader>e :EslintFixAll<CR>
 inoremap <A-a> <Esc> :wq<CR>
 nnoremap <A-a> <Esc> :wq<CR>
 " Alternate way to quit
