@@ -242,8 +242,7 @@ else
   Plug 'hrsh7th/vim-vsnip'
   Plug 'rinx/lspsaga.nvim'
 
-
-  Plug 'mattn/emmet-vim'
+  Plug 'rlue/vim-barbaric'
   call plug#end()
 
   " lua << EOF
