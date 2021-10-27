@@ -103,6 +103,10 @@ else
     inoremap <silent><expr> <c-@> coc#refresh()
   endif
   let g:coc_enable_locationlist = 0
+  command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+
+
   autocmd User CocLocationsChange CocList --normal location
   " tab标签
   Plug 'kyazdani42/nvim-web-devicons'
