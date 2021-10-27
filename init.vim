@@ -136,12 +136,16 @@ else
 
 
   " 主题
-  " Plug 'ful1e5/onedark.nvim'
-  " lua require('onedark').setup()
+  Plug 'ful1e5/onedark.nvim'
+
+  let g:onedark_colors = {
+        \ 'hint': 'orange',
+        \ 'error': '#ff0000'
+        \ }
   syntax enable
+  " colorscheme onedark
+  " colorscheme gruvbox
   " colorscheme  solarized8
-  colorscheme gruvbox
-   " colorscheme onedark
 
   " 高亮行
   set cursorline                          " Enable highlighting of the current line
