@@ -185,13 +185,9 @@ else
   let g:AutoPairsShortcutBackInsert = ''
   let g:AutoPairsShortcutJump = ''
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  Plug 'tpope/vim-commentary'
-  nnoremap <M-m> :Commentary<CR>
-  vnoremap <M-m> :Commentary<CR>
-  Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
   " Plug 'hoob3rt/lualine.nvim'
-  Plug 'shadmansaleh/lualine.nvim'
+  Plug 'nvim-lualine/lualine.nvim'
   " 处理代码高亮和回车自动indent
   Plug 'yuezk/vim-js'
   Plug 'HerringtonDarkholme/yats.vim'
@@ -274,6 +270,7 @@ else
   let g:session_autoload = 'no'
   Plug 'xolox/vim-misc'
 
+  Plug 'b3nj5m1n/kommentary'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   let g:VM_mouse_mappings = 1
   call plug#end()
