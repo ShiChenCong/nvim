@@ -257,7 +257,7 @@ else
   map  <Leader>f <Plug>(easymotion-bd-f)
   nmap <Leader>f <Plug>(easymotion-overwin-f)
 
-  Plug 'karb94/neoscroll.nvim'
+  " Plug 'karb94/neoscroll.nvim'
   Plug 'groenewege/vim-less'
   Plug 'sindrets/diffview.nvim'
   Plug 'mhinz/vim-startify'
