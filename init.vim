@@ -161,11 +161,12 @@ else
   " 搜索文件
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
-  nnoremap <leader>ff <cmd>Telescope find_files<cr>
-  nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-  nnoremap <leader>fb <cmd>Telescope buffers<cr>
-  nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+  Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
+  nnoremap <leader>fw :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
+  nnoremap <Leader>ff :lua require('telescope.builtin').find_files()<CR>
+  nnoremap <leader>fp :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
+  nnoremap <leader>fg :lua require('telescope.builtin').git_status()<CR>
   " jsx 回车 indent插件
   " Plug 'chemzqm/vim-jsx-improve'
    " Plug 'pangloss/vim-javascript'
@@ -188,10 +189,10 @@ else
   " Plug 'mileszs/ack.vim'
 
   Plug 'jiangmiao/auto-pairs'
-  let g:AutoPairsShortcutToggle = ''
-  let g:AutoPairsShortcutFastWrap = ''
-  let g:AutoPairsShortcutBackInsert = ''
-  let g:AutoPairsShortcutJump = ''
+  " let g:AutoPairsShortcutToggle = ''
+  " let g:AutoPairsShortcutFastWrap = ''
+  " let g:AutoPairsShortcutBackInsert = ''
+  " let g:AutoPairsShortcutJump = ''
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
   " Plug 'hoob3rt/lualine.nvim'
@@ -257,9 +258,9 @@ else
   " map  <Leader>f <Plug>(easymotion-bd-f)
   " nmap <Leader>f <Plug>(easymotion-overwin-f)
 
-  Plug 'easymotion/vim-easymotion'
-  map  <Leader>f <Plug>(easymotion-bd-f)
-  nmap <Leader>f <Plug>(easymotion-overwin-f)
+  " Plug 'easymotion/vim-easymotion'
+  " map  <Leader>f <Plug>(easymotion-bd-f)
+  " nmap <Leader>f <Plug>(easymotion-overwin-f)
 
   " Plug 'karb94/neoscroll.nvim'
   Plug 'groenewege/vim-less'

@@ -128,3 +128,7 @@ xnoremap <Leader>rc :s///gc<Left><Left><Left>
 
 nnoremap { {zz
 nnoremap } }zz
+
+nnoremap Y yg$
+nnoremap n nzzzv
+nnoremap N Nzzzv
