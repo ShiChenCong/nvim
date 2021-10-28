@@ -113,7 +113,8 @@ else
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
-  nnoremap <leader>fw :lua require('telescope.builtin').grep_string()<CR>
+  nnoremap <leader>fw :lua require'telescope.builtin'.live_grep()<CR>
+  nnoremap <leader>fmw :lua require'telescope.builtin'.grep_string()<CR>
   nnoremap <Leader>ff :lua require('telescope.builtin').find_files()<CR>
   nnoremap <leader>fg :lua require('telescope.builtin').git_status()<CR>
   nnoremap <leader>fp :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
@@ -240,13 +241,11 @@ else
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/nvim-cmp'
+  Plug 'rinx/lspsaga.nvim'
   Plug 'hrsh7th/cmp-vsnip'
   Plug 'hrsh7th/vim-vsnip'
   imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
   smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
-  Plug 'rinx/lspsaga.nvim'
-  imap <expr><C-l> vsnip#available(1)    ? '<Plug>(vsnip-expand)'         : '<C-l>'
-  smap <expr><C-l> vsnip#available(1)    ? '<Plug>(vsnip-expand)'         : '<C-l>'
   imap <expr><Tab> vsnip#available(1)    ? '<Plug>(vsnip-expand-or-jump)' : '<Tab>'
   smap <expr><Tab> vsnip#jumpable(1)     ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
   imap <expr><S-Tab> vsnip#available(-1) ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
