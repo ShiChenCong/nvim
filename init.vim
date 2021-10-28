@@ -247,8 +247,20 @@ else
   smap <expr><Tab> vsnip#jumpable(1)     ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
   imap <expr><S-Tab> vsnip#available(-1) ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
   smap <expr><S-Tab> vsnip#available(-1) ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+  " post install (yarn install | npm install) then load plugin only for editing supported files
+  Plug 'prettier/vim-prettier', {
+        \ 'do': 'yarn install',
+        \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+
+  "暂时不打开自动格式化 与eslint 冲突 use leader-p
+  " let g:prettier#autoformat = 1
+  " let g:prettier#autoformat_require_pragma = 0
+
+
 
   Plug 'rlue/vim-barbaric'
+
+
   call plug#end()
 
   " lua << EOF
