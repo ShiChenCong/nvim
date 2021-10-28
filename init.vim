@@ -115,8 +115,8 @@ else
 
   nnoremap <leader>fw :lua require('telescope.builtin').grep_string()<CR>
   nnoremap <Leader>ff :lua require('telescope.builtin').find_files()<CR>
-  nnoremap <leader>fp :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
   nnoremap <leader>fg :lua require('telescope.builtin').git_status()<CR>
+  nnoremap <leader>fp :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
   " jsx 回车 indent插件
   " Plug 'chemzqm/vim-jsx-improve'
    " Plug 'pangloss/vim-javascript'
