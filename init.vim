@@ -86,15 +86,16 @@ else
   " Build the extra binary if cargo exists on your system.
   " Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 
+  Plug 'ful1e5/onedark.nvim'
 
-  " 主题
-  " Plug 'ful1e5/onedark.nvim'
-  " lua require('onedark').setup()
-  Plug 'sainnhe/gruvbox-material'
+  let g:onedark_colors = {
+        \ 'hint': 'orange',
+        \ 'error': '#ff0000'
+        \ }
   syntax enable
-  colorscheme  solarized8
+  " colorscheme onedark
   " colorscheme gruvbox
-   " colorscheme onedark
+  " colorscheme  solarized8
 
   " 高亮行
   set cursorline                          " Enable highlighting of the current line
@@ -260,9 +261,10 @@ else
   " let g:prettier#autoformat_require_pragma = 0
 
 
-
+  " 自动切换输入法
   Plug 'rlue/vim-barbaric'
 
+  Plug 'norcalli/nvim-colorizer.lua'
 
   call plug#end()
 
