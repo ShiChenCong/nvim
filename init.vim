@@ -110,11 +110,12 @@ else
   " 搜索文件
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
-  nnoremap <leader>ff <cmd>Telescope find_files<cr>
-  nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-  nnoremap <leader>fb <cmd>Telescope buffers<cr>
-  nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+  Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
+  nnoremap <leader>fw :lua require('telescope.builtin').grep_string()<CR>
+  nnoremap <Leader>ff :lua require('telescope.builtin').find_files()<CR>
+  nnoremap <leader>fp :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
+  nnoremap <leader>fg :lua require('telescope.builtin').git_status()<CR>
   " jsx 回车 indent插件
   " Plug 'chemzqm/vim-jsx-improve'
    " Plug 'pangloss/vim-javascript'
@@ -210,9 +211,9 @@ else
   " map  <Leader>f <Plug>(easymotion-bd-f)
   " nmap <Leader>f <Plug>(easymotion-overwin-f)
 
-  Plug 'easymotion/vim-easymotion'
-  map  <Leader>f <Plug>(easymotion-bd-f)
-  nmap <Leader>f <Plug>(easymotion-overwin-f)
+  " Plug 'easymotion/vim-easymotion'
+  " map  <Leader>f <Plug>(easymotion-bd-f)
+  " nmap <Leader>f <Plug>(easymotion-overwin-f)
 
   " Plug 'karb94/neoscroll.nvim'
   Plug 'groenewege/vim-less'
@@ -240,6 +241,8 @@ else
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/cmp-vsnip'
   Plug 'hrsh7th/vim-vsnip'
+  imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+  smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
   Plug 'rinx/lspsaga.nvim'
   imap <expr><C-l> vsnip#available(1)    ? '<Plug>(vsnip-expand)'         : '<C-l>'
   smap <expr><C-l> vsnip#available(1)    ? '<Plug>(vsnip-expand)'         : '<C-l>'

@@ -23,6 +23,29 @@ require('telescope').setup{
     i = {
         ["<esc>"] = actions.close,
     },
-},
+  extensions = {
+    fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+      -- the default case_mode is "smart_case"
+      }
+    }
+  },
 }
+require('telescope').load_extension('fzf')
+
+local function map(mode, lhs, rhs, opts)
+local options = {noremap = true}
+if opts then options = vim.tbl_extend('force', options, opts) end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
+
+function telescope_find_word(path)
+  local _path = path or vim.fn.input("Dir: ", "", "dir")
+  require("telescope.builtin").grep_string({search_dirs = {_path}})
+end
+map('n', '<leader>fd', ':lua telescope_find_word()<CR>')
 EOF
+
