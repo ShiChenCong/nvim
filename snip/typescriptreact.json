@@ -28,6 +28,16 @@
     "body": "const [${1:setterName}, set${1:setterName}] = useState(${2:defVal})$0",
     "description": "use state hook"
   },
+  "useQuery": {
+    "prefix": "uq",
+    "body": "const [${1:setterName}, get${1:setterName}] = useQuery(${2:defVal})$0",
+    "description": "use query"
+  },
+  "useBoolean": {
+    "prefix": "ub",
+    "body": "const {state:${1:setterName}, toggle:toggle${1:setterName}} = useBoolean(${2:defVal})$0",
+    "description": "use query"
+  },
   "reactFunctionComponent": {
     "prefix": "rfc",
     "body": "import React from 'react'\n\nexport const ${TM_FILENAME_BASE}: React.FC<{}> = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
@@ -105,9 +115,9 @@
     "body": "<Cascader>$1</Cascader>$2",
     "scope": "text.html"
   },
-  "Row": {
-    "prefix": "Row",
-    "body": "<Row>$1</Row>$2",
+  "Divider": {
+    "prefix": "Divider",
+    "body": "<Divider>$1</Divider>$2",
     "scope": "text.html"
-  },
+  }
 }
