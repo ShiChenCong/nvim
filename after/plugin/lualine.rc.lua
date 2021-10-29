@@ -1,11 +1,11 @@
 local status, lualine = pcall(require, "lualine")
 if (not status) then return end
-
+local onedark = require'lualine.themes.onedark'
 lualine.setup {
   options = {
     icons_enabled = true,
     -- theme = 'solarized_dark',
-    theme = 'gruvbox',
+    theme = onedark,
     section_separators = {left = '', right = ''},
     component_separators = {left = '', right = ''},
     disabled_filetypes = {}
