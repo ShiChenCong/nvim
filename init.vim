@@ -114,9 +114,11 @@ else
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
   nnoremap <leader>fw :lua require'telescope.builtin'.live_grep()<CR>
-  nnoremap <leader>fmw :lua require'telescope.builtin'.grep_string()<CR>
   nnoremap <Leader>ff :lua require('telescope.builtin').find_files()<CR>
+  nnoremap <leader>fmw :lua require'telescope.builtin'.grep_string()<CR>
   nnoremap <leader>fg :lua require('telescope.builtin').git_status()<CR>
+  nnoremap <leader>fb :lua require('telescope.builtin').git_branches()<CR>
+  nnoremap <leader>fch :lua require('telescope.builtin').command_history()<CR>
   nnoremap <leader>fp :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
   " jsx 回车 indent插件
   " Plug 'chemzqm/vim-jsx-improve'
@@ -204,11 +206,9 @@ else
   " Plug 'airblade/vim-gitgutter'
   " nmap ]h <Plug>(GitGutterNextHunk)
   " nmap [h <Plug>(GitGutterPrevHunk)
-  Plug 'stsewd/fzf-checkout.vim'
 
   Plug 'lewis6991/gitsigns.nvim'
 
-  nmap <A-b> :GBranches<CR>
   " Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
   " map  <Leader>f <Plug>(easymotion-bd-f)
   " nmap <Leader>f <Plug>(easymotion-overwin-f)
