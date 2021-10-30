@@ -268,6 +268,8 @@ else
 
   Plug 'norcalli/nvim-colorizer.lua'
 
+  " emmet
+  Plug 'mattn/emmet-vim'
   call plug#end()
 
   " lua << EOF
