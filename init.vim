@@ -219,7 +219,7 @@ else
   " nmap <Leader>f <Plug>(easymotion-overwin-f)
 
   " Plug 'karb94/neoscroll.nvim'
-  Plug 'groenewege/vim-less'
+  " Plug 'groenewege/vim-less'
   Plug 'sindrets/diffview.nvim'
   Plug 'mhinz/vim-startify'
   let g:startify_session_dir = '~/.vim/sessions'
@@ -233,6 +233,7 @@ else
   Plug 'xolox/vim-session'
   let g:session_autosave = 'yes'
   let g:session_autoload = 'no'
+  let g:session_autosave_to="default"
   Plug 'xolox/vim-misc'
 
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
