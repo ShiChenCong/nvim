@@ -11,5 +11,5 @@ require("onedark").setup({
   sidebars = {"qf", "vista_kind", "terminal", "packer"},
 
   -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-  colors = {hint = "orange", error = "#ff0000"}
+  colors = {hint = "orange", error = "#ff0000", bg="#282C34"}
 })

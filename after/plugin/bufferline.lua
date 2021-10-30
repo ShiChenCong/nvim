@@ -1,5 +1,11 @@
 vim.opt.termguicolors = true
 require("bufferline").setup{
+  highlights = {
+    buffer_selected = {
+      guifg = '#ced1d8',
+      guibg = '#282C34',
+    },
+  },
    options = {
     close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"
     right_mouse_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
@@ -56,5 +62,6 @@ require("bufferline").setup{
      show_close_icon=true,
      show_tab_indicators=true,
      persist_buffer_sort = true,
-}}
+  }
+}
 
