@@ -67,6 +67,12 @@
     "description": "HTML - Defines an image",
     "scope": "text.html"
   },
+  "a": {
+    "prefix": "a",
+    "body": "<a href=\"$1\">$2</a>$3",
+    "description": "HTML - Defines a hyperlink",
+    "scope": "text.html"
+  },
   "input": {
     "prefix": "input",
     "body": "<input type=\"$1\" name=\"$2\" value=\"$3\">$4",
@@ -119,5 +125,13 @@
     "prefix": "Divider",
     "body": "<Divider>$1</Divider>$2",
     "scope": "text.html"
+  },
+  "console.log": {
+    "prefix": "cl",
+    "body": "console.log(${0})"
+  },
+  "console.log a variable": {
+    "prefix": "cv",
+    "body": "console.log('${0}:', ${0})"
   }
 }

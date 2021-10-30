@@ -5,6 +5,9 @@ nnoremap <silent><Backspace> :noh<CR>
 " Alternate way to save
 inoremap <A-s> <Esc> :w<CR>
 nnoremap <A-s> <Esc> :w<CR>
+
+nnoremap <leader>w :up<CR>
+
 nnoremap <leader>e :EslintFixAll<CR>
 inoremap <A-a> <Esc> :wq<CR>
 nnoremap <A-a> <Esc> :wq<CR>
@@ -135,3 +138,13 @@ nnoremap } }zz
 
 nnoremap <A-n> :cnewer<CR>
 nnoremap <A-o> :colder<CR>
+
+nnoremap ; :
+vnoremap ; :
+
+nmap ,p "0p
+nmap ,P "0
+
+" vim surround map
+nmap <leader>[ ysiw[
+nmap <leader>{ ysiw{
