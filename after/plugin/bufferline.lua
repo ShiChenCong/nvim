@@ -57,5 +57,4 @@ require("bufferline").setup{
      show_tab_indicators=true,
      persist_buffer_sort = true,
 }}
-require("bufferline").setup{}
 
