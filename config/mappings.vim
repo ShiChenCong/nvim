@@ -6,7 +6,7 @@ nnoremap <silent><Backspace> :noh<CR>
 inoremap <A-s> <Esc> :w<CR>
 nnoremap <A-s> <Esc> :w<CR>
 
-nnoremap <leader>w :up<CR>
+nnoremap <leader>w :Prettier<CR>:EslintFixAll<CR>:w<CR>
 
 nnoremap <leader>e :EslintFixAll<CR>
 inoremap <A-a> <Esc> :wq<CR>
@@ -67,11 +67,6 @@ map sj <C-w>j
 map sk <C-w>k
 map sl <C-w>l
 
-nnoremap <leader>cc :0Gclog<CR>
-"             silent normal! n
-nnoremap <leader>g :Git<CR>
-nnoremap <leader>gc :Git commit<CR>
-nnoremap <leader>gp :Git push<CR>
 
 nnoremap <leader>cf :let @*=expand("%")<CR>
 " 搜索文件
@@ -149,3 +144,17 @@ nmap ,P "0
 nmap <leader>[ ysiw[
 nmap <leader>{ ysiw{
 nmap <leader>' ysiw"
+
+" git相关的map
+" 获取整个文件夹的git历史
+nnoremap <leader>gdh :DiffviewFileHistory ./<CR>
+" 当前文件的git历史
+nnoremap <leader>gfh :DiffviewFileHistory<CR>
+" 打开当前的变动
+nnoremap <leader>gd :DiffviewOpen<CR>
+" 关闭diff
+nnoremap <leader>gc :DiffviewClose<CR>
+" 当前文件的历史git commit
+nnoremap <leader>cc :0Gclog<CR>
+nnoremap <leader>g :Git<CR>
+nnoremap <leader>gp :Git push<CR>
