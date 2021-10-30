@@ -177,9 +177,6 @@ else
   " 选中添加括号插件
   Plug 'tpope/vim-surround'
 
-  Plug 'unblevable/quick-scope'       " Plug
-  let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-
   Plug 'APZelos/blamer.nvim'
   let g:blamer_delay = 500
   let g:blamer_enabled = 1

@@ -6,7 +6,7 @@ nnoremap <silent><Backspace> :noh<CR>
 inoremap <A-s> <Esc> :w<CR>
 nnoremap <A-s> <Esc> :w<CR>
 
-nnoremap <leader>w :Prettier<CR>:EslintFixAll<CR>:w<CR>
+nnoremap <leader>w :w<CR>
 
 nnoremap <leader>e :EslintFixAll<CR>
 inoremap <A-a> <Esc> :wq<CR>
