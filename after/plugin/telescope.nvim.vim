@@ -9,8 +9,19 @@ require'nvim-treesitter.configs'.setup {
 require('telescope').setup{
 	defaults = {
      file_ignore_patterns = {"node_modules"},
+     sorting_strategy = "ascending",
      layout_config = {
-       width=180
+      prompt_position = "top",
+      horizontal = {
+        width_padding = 0.04,
+        height_padding = 0.1,
+        preview_width = 0.6,
+      },
+     vertical = {
+        width_padding = 0.05,
+        height_padding = 1,
+        peview_height = 0.5,
+      },
      },
     -- file_sorter =  require'telescope.sorters'.get_fzy_sorter,
     -- generic_sorter =  require'telescope.sorters'.get_fzy_sorter,
