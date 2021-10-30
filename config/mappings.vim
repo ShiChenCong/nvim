@@ -148,3 +148,4 @@ nmap ,P "0
 " vim surround map
 nmap <leader>[ ysiw[
 nmap <leader>{ ysiw{
+nmap <leader>' ysiw"
