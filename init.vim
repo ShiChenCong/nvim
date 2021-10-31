@@ -76,6 +76,8 @@ else
   nnoremap <leader>co :BufferLineCloseRight <CR>:BufferLineCloseLeft<CR>
   nnoremap <leader>cr :BufferLineCloseRight<CR>
   nnoremap <leader>cl :BufferLineCloseLeft<CR>
+  nnoremap mr :BufferLineMoveNext<CR>
+  nnoremap ml :BufferLineMovePrev<CR>
   " 看板
   " Plug 'glepnir/dashboard-nvim'
   " " Plug 'liuchengxu/vim-clap'
@@ -119,6 +121,7 @@ else
   nnoremap <leader>fg :lua require('telescope.builtin').git_status()<CR>
   nnoremap <leader>fb :lua require('telescope.builtin').git_branches()<CR>
   nnoremap <leader>fch :lua require('telescope.builtin').command_history()<CR>
+  nnoremap <leader>fri :lua require('telescope.builtin').registers()<CR>
   nnoremap <leader>fp :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
   " jsx 回车 indent插件
   " Plug 'chemzqm/vim-jsx-improve'
