@@ -44,5 +44,5 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 set fdm=indent
 set foldlevelstart=99
 set undolevels=99999
-set formatoptions-=cro "换行的时候不要注释 You can't stop me
+au BufEnter * set fo-=c fo-=r fo-=o
 cmap w!! w !sudo tee %
