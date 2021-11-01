@@ -141,9 +141,10 @@ nmap ,p "0p
 nmap ,P "0
 
 " vim surround map
-nmap <leader>[ ysiw[
-nmap <leader>{ ysiw{
-nmap <leader>' ysiw"
+nnoremap <leader>' :execute "normal \<Plug>Ysurroundiw\""<cr>
+nnoremap <leader>[ :execute "normal \<Plug>Ysurroundiw]"<cr>
+nnoremap <leader>{ :execute "normal \<Plug>Ysurroundiw{"<cr>
+nnoremap <leader>( :execute "normal \<Plug>Ysurroundiw("<cr>
 
 " git相关的map
 " 获取整个文件夹的git历史
