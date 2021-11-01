@@ -144,12 +144,15 @@ else
         \ 'ctrl-v': 'vsplit' }
   " Plug 'mileszs/ack.vim'
 
-  Plug 'jiangmiao/auto-pairs'
-  let g:AutoPairsShortcutToggle = ''
-  let g:AutoPairsShortcutFastWrap = ''
-  let g:AutoPairsShortcutBackInsert = ''
-  let g:AutoPairsShortcutJump = ''
+  " Plug 'jiangmiao/auto-pairs'
+  " let g:AutoPairsShortcutToggle = ''
+  " let g:AutoPairsShortcutFastWrap = ''
+  " let g:AutoPairsShortcutBackInsert = ''
+  " let g:AutoPairsShortcutJump = ''
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+  Plug 'windwp/nvim-autopairs'
+
   " Plug 'tpope/vim-commentary'
   " nnoremap <M-m> :Commentary<CR>
   " vnoremap <M-m> :Commentary<CR>
