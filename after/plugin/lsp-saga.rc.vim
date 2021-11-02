@@ -8,6 +8,10 @@ saga.init_lsp_saga {
   hint_sign = '',
   infor_sign = ' ',
   border_style = "round",
+  code_action_keys = {
+    quit = '<Esc>',
+    exec = '<CR>'
+  },
 }
 EOF
 nnoremap <silent><M-Enter> <cmd>lua require('lspsaga.codeaction').code_action()<CR>
