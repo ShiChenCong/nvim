@@ -119,7 +119,7 @@ else
   nnoremap <Leader>ff :lua require('telescope.builtin').find_files()<CR>
   nnoremap <leader>fmw :lua require'telescope.builtin'.grep_string()<CR>
   nnoremap <leader>fg :lua require('telescope.builtin').git_status()<CR>
-  nnoremap <leader>fb :lua require('telescope.builtin').git_branches()<CR>
+  nnoremap <leader>fb :lua require('telescope.builtin').file_browser({ cwd = vim.fn.expand("%:p:h") })<CR>
   nnoremap <leader>fch :lua require('telescope.builtin').command_history()<CR>
   nnoremap <leader>fri :lua require('telescope.builtin').registers()<CR>
   nnoremap <leader>fp :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
