@@ -159,3 +159,8 @@ nnoremap <leader>gc :DiffviewClose<CR>
 nnoremap <leader>cc :0Gclog<CR>
 nnoremap <leader>g :Git<CR>
 nnoremap <leader>gp :Git push<CR>
+
+
+nnoremap Y yg$
+nnoremap n nzzzv
+nnoremap N Nzzzv
