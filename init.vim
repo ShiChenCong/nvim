@@ -278,6 +278,7 @@ else
   Plug 'ThePrimeagen/harpoon'
 
 
+  Plug 'karb94/neoscroll.nvim'
   call plug#end()
 
   " lua << EOF
