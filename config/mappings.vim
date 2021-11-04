@@ -70,9 +70,9 @@ map sl <C-w>l
 
 nnoremap <leader>cf :let @*=expand("%")<CR>
 " 搜索文件
-nnoremap <A-f> :FZF<CR>
+" nnoremap <A-f> :FZF<CR>
 " 搜索单词 如果要全匹配单词 使用 Ra
-nnoremap <A-d> :Rg <CR>
+" nnoremap <A-d> :Rg <CR>
 nnoremap <A-h> :History <CR>
 
 " 前进光标记录

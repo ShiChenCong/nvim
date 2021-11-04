@@ -115,8 +115,8 @@ else
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
-  nnoremap <leader>fw :lua require'telescope.builtin'.live_grep()<CR>
-  nnoremap <Leader>ff :lua require('telescope.builtin').find_files()<CR>
+  nnoremap <A-f> :lua require'telescope.builtin'.live_grep()<CR>
+  nnoremap <A-d> :lua require('telescope.builtin').find_files()<CR>
   nnoremap <leader>fmw :lua require'telescope.builtin'.grep_string()<CR>
   nnoremap <leader>fg :lua require('telescope.builtin').git_status()<CR>
   nnoremap <leader>fb :lua require('telescope.builtin').file_browser({ cwd = vim.fn.expand("%:p:h") })<CR>
