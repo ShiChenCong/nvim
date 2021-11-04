@@ -114,7 +114,9 @@ else
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+  Plug 'tom-anders/telescope-vim-bookmarks.nvim'
 
+  nnoremap ma :lua require('telescope').extensions.vim_bookmarks.all()<CR>
   nnoremap <A-f> :lua require'telescope.builtin'.live_grep()<CR>
   nnoremap <A-d> :lua require('telescope.builtin').find_files()<CR>
   nnoremap <leader>fmw :lua require'telescope.builtin'.grep_string()<CR>
