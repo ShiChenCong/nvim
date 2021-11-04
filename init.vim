@@ -273,6 +273,11 @@ else
 
   " emmet
   Plug 'mattn/emmet-vim'
+
+
+  Plug 'ThePrimeagen/harpoon'
+
+
   call plug#end()
 
   " lua << EOF
