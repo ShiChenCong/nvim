@@ -33,7 +33,8 @@ require('telescope').setup{
       '--line-number',
       '--column',
       '--smart-case',
-      '-F'
+      '-F',
+      '-w'
       }
   },
 	pickers = {
