@@ -164,3 +164,13 @@ nnoremap <leader>gp :Git push<CR>
 nnoremap Y yg$
 nnoremap n nzzzv
 nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
+
+nnoremap <expor> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expor> j (v:count > 5 ? "m'" . v:count : "") . 'j'
