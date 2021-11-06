@@ -174,3 +174,6 @@ inoremap ? ?<c-g>u
 
 nnoremap <expor> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expor> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+
+
+inoremap <buffer> <C-s> <esc>yiwi<lt><esc>ea></><esc>hpF>a
