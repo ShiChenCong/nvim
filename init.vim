@@ -165,13 +165,13 @@ else
   " 处理代码高亮和回车自动indent
   Plug 'yuezk/vim-js'
   Plug 'HerringtonDarkholme/yats.vim'
-  Plug 'maxmellon/vim-jsx-pretty'
+  " Plug 'maxmellon/vim-jsx-pretty'
 
   " 修改jsx标签
   Plug 'samuelsimoes/vim-jsx-utils'
   nnoremap <leader>ct :call JSXChangeTagPrompt()<CR>
   nnoremap <leader>ce :call JSXEachAttributeInLine()<CR>
-  nnoremap vat :call JSXSelectTag()<CR>
+  " nnoremap vat :call JSXSelectTag()<CR>
 
   " git 
   Plug 'tpope/vim-fugitive'
