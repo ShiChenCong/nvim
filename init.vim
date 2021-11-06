@@ -281,6 +281,10 @@ else
 
 
   Plug 'karb94/neoscroll.nvim'
+
+  Plug 'kevinhwang91/nvim-bqf',{'ft': ':qf'}
+
+
   call plug#end()
 
   " lua << EOF
