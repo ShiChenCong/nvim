@@ -17,6 +17,11 @@ require('telescope').setup{
         peview_height = 0.5,
       },
      },
+    mappings = {
+        i = {
+            ["<esc>"] = actions.close,
+        },
+    },
     -- file_sorter =  require'telescope.sorters'.get_fzy_sorter,
     -- generic_sorter =  require'telescope.sorters'.get_fzy_sorter,
      vimgrep_arguments = {
@@ -35,10 +40,6 @@ require('telescope').setup{
      -- live_grep ={ theme= "dropdown"  },
      -- find_files={ theme= "dropdown"  }
 	},
-  mappings = {
-    i = {
-        ["<esc>"] = actions.close,
-    },
   extensions = {
     fzf = {
       fuzzy = true,                    -- false will only do exact matching
@@ -48,7 +49,6 @@ require('telescope').setup{
       -- the default case_mode is "smart_case"
       }
     }
-  },
 }
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('vim_bookmarks')

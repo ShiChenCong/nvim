@@ -177,3 +177,6 @@ nnoremap <expor> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 
 
 inoremap <buffer> <C-s> <esc>yiwi<lt><esc>ea></><esc>hpF>a
+
+nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
+
