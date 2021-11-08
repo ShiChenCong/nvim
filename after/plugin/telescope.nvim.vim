@@ -60,7 +60,7 @@ end
 
 function telescope_find_word(path)
   local _path = path or vim.fn.input("Dir: ", "", "dir")
-  require("telescope.builtin").grep_string({search_dirs = {_path}})
+  require("telescope.builtin").live_grep({search_dirs = {_path}})
 end
 map('n', '<leader>fd', ':lua telescope_find_word()<CR>')
 EOF
