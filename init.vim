@@ -43,7 +43,7 @@ else
   " autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
   call plug#begin('~/.config/nvim/plugged')
   " 目录树
-  Plug 'kyazdani42/nvim-tree.lua'
+  " Plug 'kyazdani42/nvim-tree.lua'
   Plug 'kyazdani42/nvim-web-devicons'
 
   set termguicolors " this variable must be enabled for colors to be applied properly
@@ -225,9 +225,10 @@ else
           \ ]
   let g:startify_enable_special = 0
   Plug 'xolox/vim-session'
-  let g:session_autosave = 'yes'
+  let g:session_autosave = 'no'
   let g:session_autoload = 'no'
   let g:session_autosave_to="default"
+  map('n', '<leader>ss', ':SaveSession<cr>')
   Plug 'xolox/vim-misc'
 
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}

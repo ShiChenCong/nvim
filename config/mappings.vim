@@ -95,6 +95,7 @@ nnoremap L $
 vnoremap L $
 
 cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%' "%% 自动扩展为当前目录
+cnoremap <expr> %% getcmdtype( ) == 'Dir: ' ? expand('%:h').'/' : '%%' "%% 自动扩展为当前目录
 
 " inoremap <C-l>    <Right>
 " cnoremap <C-l>    <Right>
@@ -134,8 +135,8 @@ nnoremap } }zz
 nnoremap <A-n> :cnewer<CR>
 nnoremap <A-o> :colder<CR>
 
-nnoremap ; :
-vnoremap ; :
+" nnoremap ; :
+" vnoremap ; :
 
 nmap ,p "0p
 nmap ,P "0
