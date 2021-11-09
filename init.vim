@@ -9,38 +9,12 @@ endfunction
 if exists('g:vscode')
   " vscode plugin
   source $HOME/.config/nvim/vscode/mapping.vim
-  " call plug#begin('~/.config/nvim/plugged')
-  "   Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
-  "   " <Leader>f{char} to move to {char}
-  "   map  <Leader>f <Plug>(easymotion-bd-f)
-  "   nmap <Leader>f <Plug>(easymotion-overwin-f)
-
-  "   " s{char}{char} to move to {char}{char}
-  "   nmap s <Plug>(easymotion-overwin-f2)
-
-  "   " Move to line
-  "   map <Leader>L <Plug>(easymotion-bd-jk)
-  "   nmap <Leader>L <Plug>(easymotion-overwin-line)
-
-  "   " Move to word
-  "   map  <Leader>w <Plug>(easymotion-bd-w)
-  "   nmap <Leader>w <Plug>(easymotion-overwin-w)
-  " call plug#end()
 else
   source $HOME/.config/nvim/config/setting.vim
   if has("nvim")
     let g:plug_home = stdpath('data') . '/plugged'
   endif
-  " let &t_Cs = "\e[4:3m"
-  " let &t_Ce = "\e[4:0m"
-  " if has("autocmd")                                                          
-  "   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif                                                        
-  " endif
-  " autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
-  " filetype on
   filetype plugin indent on
-  " autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
-  " autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
   call plug#begin('~/.config/nvim/plugged')
   " 目录树
   " Plug 'kyazdani42/nvim-tree.lua'
@@ -48,17 +22,6 @@ else
 
   set termguicolors " this variable must be enabled for colors to be applied properly
 
-  " a list of groups can be found at `:help nvim_tree_highlight`
-  " highlight NvimTreeFolderIcon guibg=blue
-
-
-
-  " 快速查找文件
-  " Plug 'ctrlpvim/ctrlp.vim'
-  " let g:ctrlp_custom_ignore = {
-  "   \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
-  "   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
-  "   \ }
 
   " tab标签
   Plug 'kyazdani42/nvim-web-devicons'
@@ -78,15 +41,6 @@ else
   nnoremap <leader>cl :BufferLineCloseLeft<CR>
   nnoremap mr :BufferLineMoveNext<CR>
   nnoremap ml :BufferLineMovePrev<CR>
-  " 看板
-  " Plug 'glepnir/dashboard-nvim'
-  " " Plug 'liuchengxu/vim-clap'
-  " let g:dashboard_default_executive ='fzf'
-  " let g:dashboard_fzf_engine = 'ag'
-
-  " 看板相关 
-  " Build the extra binary if cargo exists on your system.
-  " Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 
   Plug 'ful1e5/onedark.nvim'
 
@@ -103,12 +57,6 @@ else
   set cursorline                          " Enable highlighting of the current line
   hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=green guibg=#135564
   " hi! VertSplit guifg=black guibg=#002b36 ctermfg=black ctermbg=black
-
-  " hi CocUnderline gui=undercurl term=undercurl
-  " hi CocErrorHighlight ctermfg=red  guifg=#c4384b gui=undercurl term=undercurl
-  " hi CocWarningHighlight ctermfg=yellow guifg=#c4ab39 gui=undercurl term=undercurl
-  " 滚动
-  " Plug 'psliwka/vim-smoothie'
 
   " 搜索文件
   Plug 'nvim-lua/plenary.nvim'
@@ -155,10 +103,6 @@ else
 
   Plug 'windwp/nvim-autopairs'
 
-  " Plug 'tpope/vim-commentary'
-  " nnoremap <M-m> :Commentary<CR>
-  " vnoremap <M-m> :Commentary<CR>
-  " Plug 'JoosepAlviste/nvim-ts-context-commentstring'
   Plug 'b3nj5m1n/kommentary'
 
   Plug 'nvim-lualine/lualine.nvim'
@@ -204,16 +148,6 @@ else
 
   Plug 'lewis6991/gitsigns.nvim'
 
-  " Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
-  " map  <Leader>f <Plug>(easymotion-bd-f)
-  " nmap <Leader>f <Plug>(easymotion-overwin-f)
-
-  " Plug 'easymotion/vim-easymotion'
-  " map  <Leader>f <Plug>(easymotion-bd-f)
-  " nmap <Leader>f <Plug>(easymotion-overwin-f)
-
-  " Plug 'karb94/neoscroll.nvim'
-  " Plug 'groenewege/vim-less'
   Plug 'sindrets/diffview.nvim'
   Plug 'mhinz/vim-startify'
   let g:startify_session_dir = '~/.vim/sessions'
@@ -277,9 +211,5 @@ else
 
 
   call plug#end()
-
-  " lua << EOF
-  " require("bufferline").setup{}
-  " EOF
 
 endif
