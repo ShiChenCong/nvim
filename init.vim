@@ -210,6 +210,7 @@ else
 
   Plug 'kevinhwang91/nvim-bqf',{'ft': ':qf'}
 
+  Plug 'phaazon/hop.nvim'
 
   call plug#end()
 
