@@ -138,10 +138,11 @@ nnoremap <A-o> :colder<CR>
 nnoremap ; :
 vnoremap ; :
 
-nmap ,p "0p
-nmap ,P "0
+" register 第一个是"" 第一个是"0
+" nnoremap p "0p
+" nmap ,P "0
+nnoremap c "0c
 
-" vim surround map
 nnoremap <leader>' :execute "normal \<Plug>Ysurroundiw\""<cr>
 nnoremap <leader>[ :execute "normal \<Plug>Ysurroundiw]"<cr>
 nnoremap <leader>{ :execute "normal \<Plug>Ysurroundiw{"<cr>
