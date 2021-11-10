@@ -32,15 +32,16 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap('n', '<space>o', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
   --vim.cmd('autocmd BufWritePre <buffer> EslintFixAll')
-  client.resolved_capabilities.document_formatting = true
+   -- client.resolved_capabilities.document_formatting = true
    -- vim.cmd('autocmd bufwritepre <buffer> lua vim.lsp.buf.formatting_seq_sync()')
    -- 代码保存自动格式化formatting
-	if client.resolved_capabilities.document_formatting then
-		vim.api.nvim_command [[augroup Format]]
-		vim.api.nvim_command [[autocmd! * <buffer>]]
-		vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
-		vim.api.nvim_command [[augroup END]]
-	end
+-- 	if client.resolved_capabilities.document_formatting then
+-- 		vim.api.nvim_command [[augroup Format]]
+-- 		vim.api.nvim_command [[autocmd! * <buffer>]]
+-- 		-- vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+--     -- vim.api.nvim_command [[autocmd BufWritePre <buffer> :EslintFixAll<cr> :w<cr>]]
+-- 		vim.api.nvim_command [[augroup END]]
+--	end
   end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and

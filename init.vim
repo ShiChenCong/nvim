@@ -26,7 +26,8 @@ else
   " tab标签
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'akinsho/bufferline.nvim'
-  nnoremap <silent><A-w>  :lua require('bufferBar').closeBuffer()<CR>
+  " nnoremap <silent><A-w>  :lua require('bufferBar').closeBuffer()<CR>
+  nnoremap <silent><A-w>  : bd<CR>
   nnoremap <silent><A-1> <Cmd>BufferLineGoToBuffer 1<CR>
   nnoremap <silent><A-2> <Cmd>BufferLineGoToBuffer 2<CR>
   nnoremap <silent><A-3> <Cmd>BufferLineGoToBuffer 3<CR>
@@ -162,7 +163,7 @@ else
   let g:session_autosave = 'no'
   let g:session_autoload = 'no'
   let g:session_autosave_to="default"
-  map('n', '<leader>ss', ':SaveSession<cr>')
+  nnoremap <leader>ss :SaveSession<cr>
   Plug 'xolox/vim-misc'
 
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
